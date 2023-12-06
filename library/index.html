@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Notes on Craft | Library</title>
+	<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+
+	<div class="marquee">
+		<p class="marquee-content">
+			Whether I'm reading the text that I'm editing or reading literature purely for pleasure, I’m studying sentences, grammar, punctuation, syntax, usage, and so forth; it all interrelates, it’s all rooted in a love of text.
+		</p>
+		<p class="marquee-content">
+			Whether I'm reading the text that I'm editing or reading literature purely for pleasure, I’m studying sentences, grammar, punctuation, syntax, usage, and so forth; it all interrelates, it’s all rooted in a love of text.
+		</p>
+	</div>
+	
+	<nav class="nav">
+		<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
+		<div class="nav-links">
+			<div class="nav-filter-toggle" onclick="toggleFilters()">
+				<span>Filter</span>
+				<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
+			</div>
+			<a href="/primary-index/" class="nav-link">Primary Index</a>
+			<a href="/makers/" class="nav-link">Makers</a>
+			<a href="/library/" class="nav-link" data-active="1">Library</a>
+			<a href="/about/" class="nav-link">About</a>
+		</div>
+	</nav>
+
+	<div class="nav-filters" data-active="0">
+		<h2 class="nav-filters-heading">Selected Medium</h2>
+		<div class="nav-filters-list">
+			<div class="nav-filter" data-filter="ceramics" onclick="toggleFilter('ceramics')">Ceramics</div>
+			<div class="nav-filter" data-filter="fibers" onclick="toggleFilter('fibers')">Fibers</div>
+			<div class="nav-filter" data-filter="glass" onclick="toggleFilter('glass')">Glass</div>
+			<div class="nav-filter" data-filter="language" onclick="toggleFilter('language')">Language</div>
+			<div class="nav-filter" data-filter="metals" onclick="toggleFilter('metals')">Metals</div>
+			<div class="nav-filter" data-filter="needlework" onclick="toggleFilter('needlework')">Needlework</div>
+			<div class="nav-filter" data-filter="paper" onclick="toggleFilter('paper')">Paper</div>
+			<div class="nav-filter" data-filter="printing" onclick="toggleFilter('printing')">Printing</div>
+			<div class="nav-filter" data-filter="sculpture" onclick="toggleFilter('sculpture')">Sculpture</div>
+			<div class="nav-filter" data-filter="woodworking" onclick="toggleFilter('woodworking')">Woodworking</div>
+			<div class="nav-filter-clear" onclick="clearFilters();">X</div>
+		</div>
+	</div>
+
+	<main class="library-container">
+		<div class="library">
+			<div class="library-nav">
+				<div class="library-nav-col" data-active="1" data-sort="title" onclick="sortLibrary('title');"><span>Title</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+				<div class="library-nav-col" data-sort="lastname" onclick="sortLibrary('lastname');"><span>Author Last Name</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+				<div class="library-nav-col" data-sort="firstname" onclick="sortLibrary('firstname');"><span>Author First Name</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+				<div class="library-nav-col" data-sort="source" onclick="sortLibrary('source');"><span>Source</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+				<div class="library-nav-col" data-sort="year" onclick="sortLibrary('year');"><span>Year</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+			</div>
+
+			<div class="library-content">
+				<div class="library-item" data-categories="ceramics, language" onclick="focusLibraryItem(this)">
+					<div class="library-item-info">
+						<div>A Theory of Craft: Function and Aesthetic Expression</div>
+						<div>RisattI</div>
+						<div>Harold</div>
+						<div>University of north carolina Press</div>
+						<div>2007</div>
+					</div>
+					<div class="library-item-focus">
+						<div class="library-item-links">
+							<a href="/" target="_blank">Link</a>
+							<a href="/" target="_blank">PDF Download</a>
+						</div>
+						<div class="library-item-desc">
+							36 legendary art teachers—artists and critics themselves—on the ideal curriculum for an aspiring artist.
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<script src="library.js"></script>
+</body>
+</html>
