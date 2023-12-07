@@ -1,86 +1,1672 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Notes on Craft | Library</title>
-	<link rel="stylesheet" href="/style.css">
-</head>
-<body>
 
-	<div class="marquee">
-		<p class="marquee-content">
-			Whether I'm reading the text that I'm editing or reading literature purely for pleasure, I’m studying sentences, grammar, punctuation, syntax, usage, and so forth; it all interrelates, it’s all rooted in a love of text.
-		</p>
-		<p class="marquee-content">
-			Whether I'm reading the text that I'm editing or reading literature purely for pleasure, I’m studying sentences, grammar, punctuation, syntax, usage, and so forth; it all interrelates, it’s all rooted in a love of text.
-		</p>
-	</div>
-	
-	<nav class="nav">
-		<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
-		<div class="nav-links">
-			<div class="nav-filter-toggle" onclick="toggleFilters()">
-				<span>Filter</span>
-				<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
-			</div>
-			<a href="/primary-index/" class="nav-link">Primary Index</a>
-			<a href="/makers/" class="nav-link">Makers</a>
-			<a href="/library/" class="nav-link" data-active="1">Library</a>
-			<a href="/about/" class="nav-link">About</a>
-		</div>
-	</nav>
-
-	<div class="nav-filters" data-active="0">
-		<h2 class="nav-filters-heading">Selected Medium</h2>
-		<div class="nav-filters-list">
-			<div class="nav-filter" data-filter="ceramics" onclick="toggleFilter('ceramics')">Ceramics</div>
-			<div class="nav-filter" data-filter="fibers" onclick="toggleFilter('fibers')">Fibers</div>
-			<div class="nav-filter" data-filter="glass" onclick="toggleFilter('glass')">Glass</div>
-			<div class="nav-filter" data-filter="language" onclick="toggleFilter('language')">Language</div>
-			<div class="nav-filter" data-filter="metals" onclick="toggleFilter('metals')">Metals</div>
-			<div class="nav-filter" data-filter="needlework" onclick="toggleFilter('needlework')">Needlework</div>
-			<div class="nav-filter" data-filter="paper" onclick="toggleFilter('paper')">Paper</div>
-			<div class="nav-filter" data-filter="printing" onclick="toggleFilter('printing')">Printing</div>
-			<div class="nav-filter" data-filter="sculpture" onclick="toggleFilter('sculpture')">Sculpture</div>
-			<div class="nav-filter" data-filter="woodworking" onclick="toggleFilter('woodworking')">Woodworking</div>
-			<div class="nav-filter-clear" onclick="clearFilters();">X</div>
-		</div>
-	</div>
-
-	<main class="library-container">
-		<div class="library">
-			<div class="library-nav">
-				<div class="library-nav-col" data-active="1" data-sort="title" onclick="sortLibrary('title');"><span>Title</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
-				<div class="library-nav-col" data-sort="lastname" onclick="sortLibrary('lastname');"><span>Author Last Name</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
-				<div class="library-nav-col" data-sort="firstname" onclick="sortLibrary('firstname');"><span>Author First Name</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
-				<div class="library-nav-col" data-sort="source" onclick="sortLibrary('source');"><span>Source</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
-				<div class="library-nav-col" data-sort="year" onclick="sortLibrary('year');"><span>Year</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
-			</div>
-
-			<div class="library-content">
-				<div class="library-item" data-categories="ceramics, language" onclick="focusLibraryItem(this)">
-					<div class="library-item-info">
-						<div>A Theory of Craft: Function and Aesthetic Expression</div>
-						<div>RisattI</div>
-						<div>Harold</div>
-						<div>University of north carolina Press</div>
-						<div>2007</div>
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Notes on Craft | Library</title>
+			<link rel="stylesheet" href="/style.css">
+		</head>
+		<body>
+		
+			<a class="marquee" href="/"></a>
+			
+			<nav class="nav">
+				<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
+				<div class="nav-links">
+					<div class="nav-filter-toggle" onclick="toggleFilters()">
+						<span>Filter</span>
+						<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
 					</div>
-					<div class="library-item-focus">
-						<div class="library-item-links">
-							<a href="/" target="_blank">Link</a>
-							<a href="/" target="_blank">PDF Download</a>
-						</div>
-						<div class="library-item-desc">
-							36 legendary art teachers—artists and critics themselves—on the ideal curriculum for an aspiring artist.
-						</div>
+					<a href="/primary-index/" class="nav-link">Primary Index</a>
+					<a href="/makers/" class="nav-link">Makers</a>
+					<a href="/library/" class="nav-link" data-active="1">Library</a>
+					<a href="/about/" class="nav-link">About</a>
+				</div>
+			</nav>
+		
+			<div class="nav-filters" data-active="0">
+				<h2 class="nav-filters-heading">Selected Medium</h2>
+				<div class="nav-filters-list">
+					
+			<div class="nav-filter" data-filter="philosophical" onclick="toggleFilter('philosophical')">philosophical</div>
+		
+			<div class="nav-filter" data-filter="instructional" onclick="toggleFilter('instructional')">instructional</div>
+		
+			<div class="nav-filter" data-filter="conceptual" onclick="toggleFilter('conceptual')">conceptual</div>
+		
+			<div class="nav-filter" data-filter="forum" onclick="toggleFilter('forum')">forum</div>
+		
+			<div class="nav-filter" data-filter="exchange" onclick="toggleFilter('exchange')">exchange</div>
+		
+			<div class="nav-filter" data-filter="tactical" onclick="toggleFilter('tactical')">tactical</div>
+		
+			<div class="nav-filter" data-filter="theoretical" onclick="toggleFilter('theoretical')">theoretical</div>
+		
+			<div class="nav-filter" data-filter="exhibition" onclick="toggleFilter('exhibition')">exhibition</div>
+		
+					<div class="nav-filter-clear" onclick="clearFilters();">X</div>
+				</div>
+			</div>
+		
+			<main class="library-container">
+				<div class="library">
+					<div class="library-nav">
+						<div class="library-nav-col" data-active="1" data-sort="title" onclick="sortLibrary('title');"><span>Title</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+						<div class="library-nav-col" data-sort="lastname" onclick="sortLibrary('lastname');"><span>Author Last Name</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+						<div class="library-nav-col" data-sort="firstname" onclick="sortLibrary('firstname');"><span>Author First Name</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+						<div class="library-nav-col" data-sort="source" onclick="sortLibrary('source');"><span>Source</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+						<div class="library-nav-col" data-sort="year" onclick="sortLibrary('year');"><span>Year</span> <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
+					</div>
+		
+					<div class="library-content">
+						
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>A Theory of Craft: Function and Aesthetic Expression</div>
+					<div>Risatti</div>
+					<div>Harold</div>
+					<div>University of North Carolina Press</div>
+					<div>2007</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://uncpress.org/book/9781469600901/a-theory-of-craft/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						An art historian develops a comprehensive theory of the craft process and the studio craft disciplines.
 					</div>
 				</div>
 			</div>
-		</div>
-	</main>
-
-	<script src="library.js"></script>
-</body>
-</html>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Abstracting Craft: The Practiced Digital Hand</div>
+					<div>McCullough</div>
+					<div>Malcolm</div>
+					<div>MIT Press</div>
+					<div>1996</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://mitpress.mit.edu/9780262631891/abstracting-craft/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Suggests that designing on the computer is an instance of hand craft, with nods to process.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Aesthetics of the Everyday</div>
+					<div>Saito</div>
+					<div>Yuriko</div>
+					<div>Metaphysics Research Lab, Stanford University</div>
+					<div>2023</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						<a href="https://plato.stanford.edu/entries/aesthetics-of-everyday/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						An anthology on the topic of environmental aesthetics and the efforts that opened the field of aesthetics beyond the fine arts during the latter half of twentieth century.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Philosophical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Against Interpretation</div>
+					<div>Sontag</div>
+					<div>Susan</div>
+					<div>Against Interpretation and Other Essays : Penguin Classics</div>
+					<div>1966</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Essay</span>
+						
+						<a href="/assets/pdfs/Sontag_Against-Interpretation.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						A critical look at artistic criticism and an argument for resisting predetermined interpretations of visual works based on their content and meaning.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Instructional" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Akademie X: Lessons in Art + Life</div>
+					<div>Abramovic</div>
+					<div>Marina, et al.</div>
+					<div>Phaidon</div>
+					<div>2015</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.phaidon.com/store/art/akademie-x-lessons-in-art-life-9780714867366/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						36 legendary art teachers—artists and critics themselves—on the ideal curriculum for an aspiring artist.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Philosophical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Art and Its Objects</div>
+					<div>Wollheim</div>
+					<div>Richard</div>
+					<div>Cambridge University Press</div>
+					<div>1980</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.cambridge.org/core/books/art-and-its-objects/70E197A1F6702CC6E5318C8139A08C42" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Contains a classic reflection on expression, representation, style, the significance of the artist's intention.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Art as Experience</div>
+					<div>Dewey</div>
+					<div>John</div>
+					<div>G. P. Putnam</div>
+					<div>1934</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						<a href="/assets/pdfs/Dewey_Art-as-Experience.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						Makes a case for seeing art as an intellectual achievement of human history and living proof of our experiences.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Art as Performance</div>
+					<div>Davies</div>
+					<div>David</div>
+					<div>Blackwell</div>
+					<div>2004</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://onlinelibrary.wiley.com/doi/book/10.1002/9780470774922" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Contains a valuable new perspective on the issue of material and medium.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Art in the Making: Artists and Their Materials from the Studio to Crowdsourcing</div>
+					<div>Adamson & Bryan-Wilson</div>
+					<div>Glenn & Julia</div>
+					<div>Thames & Hudson</div>
+					<div>2016</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.thamesandhudsonusa.com/books/art-in-the-making-artists-and-their-materials-from-the-studio-to-crowdsourcing-hardcover" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A look at individual processes of making through a collection of 9 crafts: Painting, Woodworking, Building, Performing, Tooling Up, Cashing In, Fabricating, Digitizing, and Crowdsourcing
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Art School: Propositions for the 21st Century</div>
+					<div>Madoff</div>
+					<div>Steven H.</div>
+					<div>MIT Press</div>
+					<div>2009</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Includes discussion of “deskilling,” a persistent effort to eliminate the need forartisanal competence.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Artistry: The Work of Artists.</div>
+					<div>Howard</div>
+					<div>V. A.</div>
+					<div>Hackett</div>
+					<div>1982</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A study of the craft process by a philosopher who refreshingly uses singing as a case study.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>As Radical, As Mother, as Salad, as Shelter: What Should Art Institutions Do Now?,</div>
+					<div>Bassa, Bass, Beard et al.</div>
+					<div>Regine, Chloë, Deana, et al.</div>
+					<div>Paper Monument</div>
+					<div>2018</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://shop.nplusonemag.com/products/as-radical-as-mother-as-salad-as-shelter-what-should-art-institutions-do-now" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A series of essays chronicling the change in the positioning of art institutions vis-a-vis political activism.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Batch: Craft, Design and Product</div>
+					<div>Tanner</div>
+					<div>Andrew.  L</div>
+					<div>A & C Black</div>
+					<div>2010</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Essays on the designer-maker trend in the design profession.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Blurred Boundaries? Rethinking the Concept of Craft and its Relation to Art and Design</div>
+					<div>Shiner</div>
+					<div>Larry</div>
+					<div>Philosophy Compass</div>
+					<div>2012</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Argues that the boundary between art and craft conceived as a set of disciplines defined by materials and techniques has not become blurred, it has all but disappeared.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>By Hand: The Use of Craft in Contemporary Art.</div>
+					<div>Hung & Joseph</div>
+					<div>Shu & Magliaro, Eds.</div>
+					<div>Princeton Architectural Press</div>
+					<div>2007</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Features the work of thirty-two artists whose innovative and unexpected uses of handicraft techniques.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Choosing Craft: The Artist’s Viewpoint</div>
+					<div>Halper & Douglas</div>
+					<div>Vicki & Diane, Eds.</div>
+					<div>University of North Carolina Press</div>
+					<div>2009</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A history and practice of American craft through the words of influential artists whose lives, work, and ideas have shaped the field.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Craft</div>
+					<div>Harrod</div>
+					<div>Tanya, Ed.</div>
+					<div>The MIT Press</div>
+					<div>2018</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://mitpress.mit.edu/9780262535830/craft/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A secret history of craft told through lost and overlooked texts that illuminate our understanding of current art practice.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Crafting Modernism: Midcentury American Art and Design</div>
+					<div>Falino</div>
+					<div>Jeannine J., Ed</div>
+					<div>Abrams</div>
+					<div>2011</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						On the origins of the studio craft movement and its convergence with the fine arts and design.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Crafts, Perception, and the Possibilities of the Body</div>
+					<div>Boden</div>
+					<div>Margaret A.</div>
+					<div>British Journal of Aesthetics</div>
+					<div>2000</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						<a href="https://www.are.na/block/24462982" target="_blank">Link</a>
+						<a href="/assets/pdfs/Boden_Crafts-Perception-and-the-Possibilities-of-the-Body.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						On craft as grounded in “enactive” psychological mechanisms with functional purposes grounded in our everyday bodily habits.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Philosophical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Critique of the Power of Judgment</div>
+					<div>Kant</div>
+					<div>Immanuel</div>
+					<div>Cambridge University Press</div>
+					<div>2000</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						<a href="/assets/pdfs/Kant_Critique-of-Judgement.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						On the aesthetic and teleological questions, and our formations of subjectivity.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Conceptual" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Defending Everyday Aesthetics and the Concept of 'Pretty'</div>
+					<div>Leddy</div>
+					<div>Thomas</div>
+					<div>Contemporary Aesthetics Inc.</div>
+					<div>2012</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						<a href="https://contempaesthetics.org/" target="_blank">Link</a>
+						<a href="/assets/pdfs/Leddy_The-Concept-of-Pretty.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						A close analysis of the concept of pretty to suggest the ways it ignores the importance of aesthetic value in the parts of our lives not devoted to art.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Denise Gonzales Crisp: The decorational</div>
+					<div>Tremlow</div>
+					<div>Alice</div>
+					<div>Winter</div>
+					<div>2005</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						<a href="https://www.eyemagazine.com/feature/article/denise-gonzales-crisp-the-decorational" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						On the role of the decorative in practices of graphic design, specifically as they pertain to typography
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Design and Crime, and Other Diatribes</div>
+					<div>Foster</div>
+					<div>Hal</div>
+					<div>Verso</div>
+					<div>2002</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						On design excess in the modern spectacle that is the marketing of culture and the branding of identity.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Design as Art</div>
+					<div>Munari</div>
+					<div>Bruno</div>
+					<div>Pengun Books</div>
+					<div>2019</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						An illustrated journey into the artistic possibilities of modern design, guided by the creative mind of the Italian artist and designer Bruno Munari.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Embodied Meanings: Critical Essays & Aesthetic Meditations</div>
+					<div>Danto</div>
+					<div>Arthur C.</div>
+					<div>Farrar, Straus and Giroux</div>
+					<div>1994</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Features two important essays on craft in art, one a review of Martin Puryear, the other on function in fine art.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Everyday Aesthetics</div>
+					<div>Saito</div>
+					<div>Yuriko</div>
+					<div>Oxford University Press</div>
+					<div>2007</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						On cultivating an awareness of everyday aesthetic experiences and using this to exert powerful influence on the state.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Extra/Ordinary: Craft and Contemporary Art</div>
+					<div>Buszek</div>
+					<div>Maria E.</div>
+					<div>Duke University Press</div>
+					<div>2011</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						An wide-ranging introduction to the “craft culture” referenced and celebrated by artists promoting new ways of thinking about the role of craft in contemporary art.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Philosophical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Functional Beauty</div>
+					<div>Carlson & Parsons</div>
+					<div>Allen & Glenn</div>
+					<div>Oxford University Press</div>
+					<div>2008</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						An in-depth philosophical study of the relationship between function and aesthetic value, breaking with the philosophical tradition of seeing the two as separate.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Philosophical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Functionalism Today</div>
+					<div>Adorno</div>
+					<div>Theodore W. F</div>
+					<div>Oxford University Press</div>
+					<div>2011</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Essay</span>
+						
+						<a href="/assets/pdfs/To Do" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						On the self-contradictions endemic to to artistic production constrained by social conditions.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Hand + Made: The Performative Impulse in Art and Craft</div>
+					<div>Oliver</div>
+					<div>Valerie C., Ed.</div>
+					<div>Contemporary Arts Museum</div>
+					<div>2010</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Featuring artists working to broaden the context and function of the handmade object, blurring the distinctions between performance and sculpture.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Handmade Nation: The Rise of DIY, Art, Craft and Design</div>
+					<div>Levine & Heimerl</div>
+					<div>Faythe & Cortney, Eds.</div>
+					<div>Princeton Architectural Press</div>
+					<div>2008</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.faythelevine.com/untitled-m7z15" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A close look at the contemporary craft movement’s embrace of emerging makers working in traditional and nontraditional media
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Forum" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Journal of Modern Craft</div>
+					<div>Adamson</div>
+					<div>Glenn, Ed.</div>
+					<div>Taylor & Francis</div>
+					<div>2023</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Journal</span>
+						<a href="https://www.tandfonline.com/journals/rfmc20" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						The first peer-reviewed academic journal to provide an interdisciplinary and international forum in its subject area.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Exchange" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Listening to Clay: Conversations with Contemporary Japanese Ceramic Artists</div>
+					<div>North, North & Allison Cort</div>
+					<div>Alice, Halsey & Louise</div>
+					<div>Monacelli Press, Phaidon</div>
+					<div>2022</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.phaidon.com/monacelli/art-and-photography/listening-to-clay-conversations-with-contemporary-japanese-ceramic-artists-9781580935920/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A look at the ingenuity and trailblazing that has shaped contemporary art in Japan and around the world, guided by conversation with contemporary artists ranging in age from sixty-two to ninety-two.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Loving Attention: An Outburst of Craft in Contemporary Art</div>
+					<div>Jefferies</div>
+					<div>Janis</div>
+					<div>Extra/Ordinary : Duke University Press</div>
+					<div>2011</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Essay</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A window into demonstrations of craft beginning to play leading roles in the significance of the handmade object within contemporary art practice.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Machine in the Studio: Constructing the Postwar American Artist</div>
+					<div>Jones</div>
+					<div>Caroline</div>
+					<div>University of Chicago Press</div>
+					<div>1996</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A fresh look at the art world of the 1960s.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Conceptual , Tactical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Macrame of Resistance</div>
+					<div>Wild</div>
+					<div>Lorainne</div>
+					<div>Emigre Magazine</div>
+					<div>1998</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						
+						<a href="/assets/pdfs/Wild_Macrame-of-Resistance.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						On the role of craft in the design and the need to move beyond its purely conceptual and technical activations.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Instructional" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Make a Chair from a Tree</div>
+					<div>Alexander</div>
+					<div>Jennie</div>
+					<div>Lost Art Press</div>
+					<div>1978</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://lostartpress.com/products/make-a-chair-from-a-tree" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A instructional book that helped ignite a green woodworking movement in the United States and positioned wordworkers to use trees sustainably.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Makers: A History of American Studio Craft</div>
+					<div>Koplos,</div>
+					<div>Janet, and Bruce Metcalf</div>
+					<div>University of North Carolina Press</div>
+					<div>2010</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						The first comprehensive history of studio craft in the United States.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Instructional" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Making and Being: Embodiment, Collaboration, and Circulation in the Visual Arts, A Workbook</div>
+					<div>Jahoda & Woolard</div>
+					<div>Susan & Caroline, Ed</div>
+					<div>Pioneer Works Press</div>
+					<div>2020</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://makingandbeing.com/" target="_blank">Link</a>
+						<a href="/assets/pdfs/Jahoda_Woodlard_Making-&-Being.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						A hands-on guide containing activities, worksheets, and assignments, offering a framework for teaching art that emphasizes contemplation, collaboration, and political economy.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Making Is Connecting: The Social Meaning of Creativity: From DIY and Knitting to YouTube and Web 2.0.</div>
+					<div>Gauntlett</div>
+					<div>David</div>
+					<div>Polity</div>
+					<div>2011</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Highlighting the ways that making things allows people to engage thoughtfully  with the world around them.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Neocraft: Modernity and the Crafts</div>
+					<div>Alfoldy</div>
+					<div>Sandra, Ed.</div>
+					<div>The Press of the Nova Scotia College of Art and Design</div>
+					<div>2008</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Challenges the marginal role that craft has played in Modernist discourse with a wide selection of scholarship on the subject.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Objects and Meaning: New Perspectives on Art and Craft</div>
+					<div>Fariello</div>
+					<div>M. Anna and Paula Owen, ed.</div>
+					<div>Scarecrow</div>
+					<div>2005</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						Questions how various academic and cultural institutions assign meaning to artist-made objects in postmodern North America.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Philosophizing with a Hammer: Gary Knox Bennett and Contemporary Art</div>
+					<div>Danto</div>
+					<div>Arthur C.</div>
+					<div>Made in Oakland : American Craft Museum</div>
+					<div>2001</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A close look at Danto’s position on craft and its relation to art.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Redesigning the World: William Morris, the 1880s and the Arts and Crafts Movement</div>
+					<div>Stansky</div>
+					<div>Peter</div>
+					<div>Princeton University Press</div>
+					<div>1985</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						On William Morris and his definitive influence on the craft revolution of the late 1800s.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>String, Felt, Thread: The Hierarchy of Art and Craft in American Art</div>
+					<div>Auther</div>
+					<div>Elissa</div>
+					<div>University of Minnesota Press</div>
+					<div>2010</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A history of the struggle for the fiber arts to gain recognition from the cultural sector as an art.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Conceptual" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Tacit Knowledge, Rule-Following and Learning</div>
+					<div>Janik</div>
+					<div>Allan</div>
+					<div>Artificial Intelligence, Culture and Language : Springer-Verlag</div>
+					<div>1990</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A critique of both critics and defenders of this concept of “tacit knowledge” and its importance in new design technologies.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>TEXTile Manifestoes</div>
+					<div>Liška & Mudry</div>
+					<div>Pavel & Robin R., eds</div>
+					<div>Artmap</div>
+					<div>2023</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.ideabooks.nl/9788088308409-textile-manifestoes" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						An interdisciplinary anthology that assembles and interweaves questions related to textile art, fashion and textuality into broader socio-politcal contexts
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Conceptual" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Art Form That Dares Not Speak Its Name</div>
+					<div>Kino</div>
+					<div>Carol</div>
+					<div>New York Times</div>
+					<div>2005</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						On making “craft” a dirty word and the question that bedevils practitioners and museum insiders.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Art Instinct: Beauty, Pleasure, and Human Evolution</div>
+					<div>Dutton</div>
+					<div>Dennis</div>
+					<div>Bloomsbury Press</div>
+					<div>2009</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.bloomsbury.com/us/art-instinct-9781608191932/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Offers early insight into both the nature of art and the workings of the human mind, through the lens of evolutionary science.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Art of Not Making: The New Artist/Artisan Relationship</div>
+					<div>Petry</div>
+					<div>Michael</div>
+					<div>Thames & Hudson</div>
+					<div>2011</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://thamesandhudson.com/art-of-not-making-the-new-artist-artisan-relationship-9780500290262" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A review of 115 contemporary artists, and the ways they collaborate with craftspeople to realize their work.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Art of the Maker: Skill and Its Meaning in Art, Craft and Design</div>
+					<div>Dormer</div>
+					<div>Peter</div>
+					<div>Thames & Hudson</div>
+					<div>1994</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						On process and content as interdependent and mutually enriching facets of a communal culture of artistic discovery.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Arts & Crafts Movement in Europe & America</div>
+					<div>Kaplan</div>
+					<div>Wendy, Ed.</div>
+					<div>Thames & Hudson</div>
+					<div>2004</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Arts and Crafts Movement in America</div>
+					<div>Obniski</div>
+					<div>Monica.</div>
+					<div>The Metropolitan Museum of Art</div>
+					<div>2008</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Essay</span>
+						<a href="https://metmuseum.org/toah/hd/acam/hd_acam.htm" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A bief history of the Arts and Crafts Movement in North America.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Arts and The Defintion of the Human</div>
+					<div>Margolis</div>
+					<div>Joseph</div>
+					<div>Stanford University Press</div>
+					<div>1980</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.sup.org/books/title/?id=16277" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Suggests that our creation and perception of art will always be mitigated by our historical and cultural contexts.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Beauty of Everyday Things</div>
+					<div>Soetsu</div>
+					<div>Yanagi</div>
+					<div>Penguin Classics</div>
+					<div>2019</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						A hugely influential exposition of the Japanese philosopher's view of folkcrafts, setting out the hallmarks of Japanese design as we know it today.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Exchange" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Black Craftsman Situation':  A Critical Conversation about Race and Craft</div>
+					<div>Clark, Clark, Obler, et al.</div>
+					<div>Sonya, Wesley, Bibiana, et al.</div>
+					<div>The New Politics of the Handmade : Bloomsbury</div>
+					<div>2021</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Essay</span>
+						<a href="https://www.namitawiggers.com/the-new-politics-of-the-handmade-craft-art-and-design" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A roundtable conversation with Sonya Clark, Wesley Clark, Bibiana Obler, Mary Savig, Joyce Scott, and Namita Gupta Wiggers.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Craft Reader</div>
+					<div>Adamson</div>
+					<div>Glenn, Ed.</div>
+					<div>Berg Publishers, Bloomsbury</div>
+					<div>2008</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.bloomsbury.com/us/craft-reader-9781350092648/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A range of both classic and contemporary texts on the different traditions of craft, covering the period from the Industrial Revolution to today,
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Crafts in Britain in the 20th Century</div>
+					<div>Harrod</div>
+					<div>Tanya</div>
+					<div>Yale University Press</div>
+					<div>1999</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Craftsman</div>
+					<div>Sennett</div>
+					<div>Richard</div>
+					<div>Yale University Press</div>
+					<div>2008</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://yalebooks.yale.edu/book/9780300151190/the-craftsman/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						An original perspective on craftsmanship and its close connections to work and ethical values and how one might engage the multiple dimsions of skill.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Culture of Craft: Status and Future.</div>
+					<div>Dormer</div>
+					<div>Peter, Ed.</div>
+					<div>University of Manchester Press</div>
+					<div>1997</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Decriminalization of Ornament</div>
+					<div>Crisp</div>
+					<div>Denise Gonzales</div>
+					<div>Winter 2005</div>
+					<div>2005</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						<a href="https://www.eyemagazine.com/feature/article/the-decriminalisation-of-ornament-full-text" target="_blank">Link</a>
+						<a href="/assets/pdfs/TODO" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Fate of Craft</div>
+					<div>Shiner</div>
+					<div>Larry</div>
+					<div>Press of the Nova Scotia College of Art and Design</div>
+					<div>2007</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Ideology of the Aesthetic</div>
+					<div>Eagleton</div>
+					<div>Terry</div>
+					<div>Poetics Today</div>
+					<div>1988</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						<a href="/assets/pdfs/Eagleton_Ideology-of-the-Aesthetic.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Intangibles of Form: Skill and Deskilling in Art after the Readymade. L</div>
+					<div>Roberts</div>
+					<div>John</div>
+					<div>Verso Books</div>
+					<div>2007</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Theoretical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Invention of Art: A Cultural History</div>
+					<div>Shiner</div>
+					<div>Larry</div>
+					<div>University of Chicago Press</div>
+					<div>2001</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Invention of Craft</div>
+					<div>Adamson</div>
+					<div>Glenn</div>
+					<div>Bloomsbury</div>
+					<div>2013</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.bloomsbury.com/us/invention-of-craft-9781350088092/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A theoretical discussion of skilled work, reaching backwards in time and across numerous disciplines to suggest its relationship to invention.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Madonna of the Future: Essays in a Pluralistic Art World</div>
+					<div>Danto</div>
+					<div>Arthur C.</div>
+					<div>Farrar, Straus and Giroux</div>
+					<div>2000</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Nature and Art of Workmanship</div>
+					<div>Pye</div>
+					<div>David</div>
+					<div>Cambridge University Press</div>
+					<div>1968</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						An exploration of the meaning of skill and its relationship to design and manufacturing, which proposes a new theory of making based on the concepts of 'workmanship of risk' and 'workmanship of certainty.'
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Nature of Everyday Aesthetics</div>
+					<div>Leddy</div>
+					<div>Thomas</div>
+					<div>The Aesthetics of Everyday Life : Columbia University Press</div>
+					<div>2005</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						
+						
+					</div>
+					<div class="library-item-desc">
+						
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Exchange" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The New Politics of the Handmade: Craft, Art & Design</div>
+					<div>Btack & Burisch</div>
+					<div>Anthea & Nicote, Ed.</div>
+					<div>Bloomsbury</div>
+					<div>2021</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.bloomsbury.com/us/new-politics-of-the-handmade-9781788316552/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Twenty-three voices rethinking the handmade in the contecxt of a dramatically shifting global economy inseparable from production and consumption.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Persistence of Craft: The Applied Arts Today</div>
+					<div>Greenhalgh</div>
+					<div>Peter, Ed.</div>
+					<div>A. & C. Black</div>
+					<div>2002</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://archive.org/details/persistenceofcra00paul/page/n5/mode/2up" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A look at studio arts from woodworking, ceramics and glass to jewellery, metalworking and textiles, and the factors that have shaped their development.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Philosophical" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Practice of Everyday Life</div>
+					<div>Certeau</div>
+					<div>Michel</div>
+					<div>UC Berkeley Press</div>
+					<div>1984</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						
+						<a href="/assets/pdfs/De-Certeau_The-Practice-of-Everyday-Life.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						On the fundamental practices of a "fine art of dwelling," in which places are organized in a network of history and relationship.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Tacit Dimension</div>
+					<div>Polanyi</div>
+					<div>Michael</div>
+					<div>University of Chicago Press</div>
+					<div>2009</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://press.uchicago.edu/ucp/books/book/chicago/T/bo6035368.html" target="_blank">Link</a>
+						<a href="/assets/pdfs/Polanyi_The-Tacit-Dimension.pdf" target="_blank">PDF Download</a>
+					</div>
+					<div class="library-item-desc">
+						Argues that tacit knowledge—tradition, inherited practices, implied values, and prejudgments—is a crucial part of scientific knowledge.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>The Theory of Decorative Art: An Anthology of European & American Writings, 1750–1940.</div>
+					<div>Frank</div>
+					<div>Isabelle, Ed.</div>
+					<div>Yale University Press</div>
+					<div>2000</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://archive.org/details/theoryofdecorati0000unse/page/n5/mode/2up" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						An anthology of European and American writings on
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Thinking through Craft</div>
+					<div>Adamson</div>
+					<div>Glenn</div>
+					<div>Berg Publishers, Bloomsbury</div>
+					<div>2010</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.bloomsbury.com/us/thinking-through-craft-9781350092631/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Reviews the status of "workmanship" in the contempoary arts and nakes a case for defining craft in a more nuanced fashion.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>What is Art For?</div>
+					<div>Dissanayake</div>
+					<div>Ellen</div>
+					<div>University of Washington Press</div>
+					<div>1990</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://uwapress.uw.edu/book/9780295970172/what-is-art-for/#:~:text=In%20this%20provocative%20study%2C%20Ellen,species%20as%20speech%20and%20toolmaking." target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						On art-making as an innately human behavior—as intrinsic to the species as speech and toolmaking.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Wild Things: The Material Culture of Everyday Life</div>
+					<div>Attfield</div>
+					<div>Judy</div>
+					<div>Berg Publishers, Bloomsbury</div>
+					<div>2010</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.bloomsbury.com/us/wild-things-9781859733646/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						Bridging design theory and anthropology to offer a new and challenging way of understanding the changing meanings of contemporary human-object relations.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="Exhibition" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Work Ethic</div>
+					<div>Molesworth</div>
+					<div>Helen, Ed.</div>
+					<div>Baltimore Museum of Art</div>
+					<div>2003</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://www.psupress.org/books/titles/0-271-02334-1.html" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A look at the avant-garde interventions in art of 1960s linking a "dematerialization" of the object with the free play of concepts, produced in tandem with an exhibition of the same name.
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>Working: People Talk Abut What They Do All Day and How They Feel About What They Do</div>
+					<div>Turkel</div>
+					<div>Studs</div>
+					<div>Pantheon Books</div>
+					<div>1972</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Book</span>
+						<a href="https://thenewpress.com/books/working" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						An investigation, through conversational dialogue, of the meaning of work for different people under different circumstances,
+					</div>
+				</div>
+			</div>
+		
+			<div class="library-item" data-categories="" onclick="focusLibraryItem(this)">
+				<div class="library-item-info">
+					<div>That Crafty Feeling</div>
+					<div>Smith</div>
+					<div>Zadie</div>
+					<div>Believer Magazine</div>
+					<div>2008</div>
+				</div>
+				<div class="library-item-focus">
+					<div class="library-item-links">
+						<span>Article</span>
+						<a href="https://www.thebeliever.net/that-crafty-feeling/" target="_blank">Link</a>
+						
+					</div>
+					<div class="library-item-desc">
+						A lecture given to student of the Columbia University's Creative Writing Program on the subject of craft
+					</div>
+				</div>
+			</div>
+		
+					</div>
+				</div>
+			</main>
+		
+			<script src="library.js"></script>
+			<script src="/marquee.js"></script>
+		</body>
+		</html>
+	

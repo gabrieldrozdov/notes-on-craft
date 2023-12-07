@@ -1,210 +1,356 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Notes on Craft | Makers</title>
-	<link rel="stylesheet" href="/style.css">
-</head>
-<body>
 
-	<div class="marquee">
-		<p class="marquee-content">
-			Whether I'm reading the text that I'm editing or reading literature purely for pleasure, I’m studying sentences, grammar, punctuation, syntax, usage, and so forth; it all interrelates, it’s all rooted in a love of text.
-		</p>
-		<p class="marquee-content">
-			Whether I'm reading the text that I'm editing or reading literature purely for pleasure, I’m studying sentences, grammar, punctuation, syntax, usage, and so forth; it all interrelates, it’s all rooted in a love of text.
-		</p>
-	</div>
+		<!DOCTYPE html>
+		<html lang="en">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<title>Notes on Craft | Makers</title>
+			<link rel="stylesheet" href="/style.css">
+		</head>
+		<body>
+		
+			<a class="marquee" href="/"></a>
+			
+			<nav class="nav">
+				<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
+				<div class="nav-links">
+					<div class="nav-filter-toggle" onclick="toggleFilters()">
+						<span>Filter</span>
+						<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
+					</div>
+					<a href="/primary-index/" class="nav-link">Primary Index</a>
+					<a href="/makers/" class="nav-link" data-active="1">Makers</a>
+					<a href="/library/" class="nav-link">Library</a>
+					<a href="/about/" class="nav-link">About</a>
+				</div>
+			</nav>
+		
+			<div class="nav-filters" data-active="0">
+				<h2 class="nav-filters-heading">Selected Medium</h2>
+				<div class="nav-filters-list">
+					
+			<div class="nav-filter" data-filter="nonfiction" onclick="toggleFilter('nonfiction')">nonfiction</div>
+		
+			<div class="nav-filter" data-filter="writing" onclick="toggleFilter('writing')">writing</div>
+		
+			<div class="nav-filter" data-filter="poetry" onclick="toggleFilter('poetry')">poetry</div>
+		
+			<div class="nav-filter" data-filter="comics" onclick="toggleFilter('comics')">comics</div>
+		
+			<div class="nav-filter" data-filter="furniture" onclick="toggleFilter('furniture')">furniture</div>
+		
+			<div class="nav-filter" data-filter="sculpture" onclick="toggleFilter('sculpture')">sculpture</div>
+		
+			<div class="nav-filter" data-filter="ceramics" onclick="toggleFilter('ceramics')">ceramics</div>
+		
+			<div class="nav-filter" data-filter="printmaking" onclick="toggleFilter('printmaking')">printmaking</div>
+		
+			<div class="nav-filter" data-filter="burlesque" onclick="toggleFilter('burlesque')">burlesque</div>
+		
+			<div class="nav-filter" data-filter="digital media" onclick="toggleFilter('digital media')">digital media</div>
+		
+			<div class="nav-filter" data-filter="technology" onclick="toggleFilter('technology')">technology</div>
+		
+			<div class="nav-filter" data-filter="photography" onclick="toggleFilter('photography')">photography</div>
+		
+			<div class="nav-filter" data-filter="filmmaking" onclick="toggleFilter('filmmaking')">filmmaking</div>
+		
+					<div class="nav-filter-clear" onclick="clearFilters();">X</div>
+				</div>
+			</div>
+		
+			<main class="makers">
+				
+			<div class="maker" data-categories="Nonfiction, Writing" id="georgia-cloepfil">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Georgia-Cloepfil.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Georgia-Cloepfil.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Georgia Cloepful <span>she/her</span></h2>
+					<p>undefined</p>
+					<p>Walla Walla, WA, USA</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://georgiacloepfil.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/georgiacloepfil" target="_blank">@georgiacloepfil</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Georgia Cloepfil [b.1992] is a writer and former professional soccer player from Oregon. Her nonfiction debut, <em>The Striker and the Clock</em>, is forthcoming in 2024 from <a href="https://www.penguinrandomhouse.com/books/735538/the-striker-and-the-clock-by-georgia-cloepfil/">Riverhead (U.S.)</a>and <a href="https://www.bloomsbury.com/uk/striker-and-the-clock-9781526668516/">Bloomsbury (U.K.)</a>. Her other writing can be found in The Yale Review, The New York Times Magazine, The Washington Post, n+1, Colorado Review, Joyland and Epiphany among other places. Select essays have been featured on Longreads, The Rumpus, and WBUR Boston’s Only a Game. She holds an MFA from the University of Idaho and works at Whitman College.
+			</div>
+
+			
+				<div class="maker-links">
+					<a href="/conversations/georgia-cloepfil/">Craft as Channeling Voice</a>
+					<a href="/participatory-invitations/georgia-cloepfil/">Blank Pages</a>
+					<a href="/extended-notes/georgia-cloepfil/">A Collection by Georgia Cloepfil</a>
+				</div>
+			
+		</div>
+		
+			<div class="maker" data-categories="Poetry, Writing" id="tirzah-goldenberg">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Tirzah-Goldenberg.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Tirzah-Goldenberg.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Tirzah Goldenberg <span>she/her</span></h2>
+					<p>undefined</p>
+					<p>Port Townsend, WA, USA</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://tirzahgoldenberg.com" target="_blank">Website</a>
+					
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Tirzah Goldenberg [b. 1985] is a poet and freelance editor. She's the author of <em><a href="https://www.vergebooks.com/#/tirzah-goldenberg-like-an-olive/">Aleph</a></em> and <em><a href="https://www.vergebooks.com/#/tirzah-goldenberg-aleph/">Like an Olive</a></em>, both published by Verge Books. She lives by the Salish Sea with her husband Rico and their beloved cat Fennel.
+			</div>
+
+			
+				<div class="maker-links">
+					<a href="/conversations/tirzah-goldenberg/">Craft as a Vessel on the Water</a>
+					<a href="/participatory-invitations/tirzah-goldenberg/">Fewer Tools, More Environment</a>
+					<a href="/extended-notes/tirzah-goldenberg/">A Collection by with Tirzah Goldenberg</a>
+				</div>
+			
+		</div>
+		
+			<div class="maker" data-categories="Comics, Writing" id="john-sherman">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/John-Sherman.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/John-Sherman.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>John Sherman <span>he/him</span></h2>
+					<p>undefined</p>
+					<p>Brooklyn, NY, USA</p>
+				</div>
+				<div class="maker-info-right">
+					
+					
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				John Sherman [b.1989] is a zinemaker, cartoonist, and writer laboring in the publishing industry.
+			</div>
+
+			
+				<div class="maker-links">
+					<a href="/conversations/john-sherman/">Craft as Permanent Impermanence</a>
+					<a href="/participatory-invitations/john-sherman/">Containers for Comic Relief</a>
+					<a href="/extended-notes/john-sherman/">A Collection by John Sherman</a>
+				</div>
+			
+		</div>
+		
+			<div class="maker" data-categories="Furniture, Sculpture" id="jan-rybczynski">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Jan-Rybczynski.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Jan-Rybczynski.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Jan Rybczynski <span>he/him</span></h2>
+					<p>undefined</p>
+					<p>Boulder, CO, USA</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://janrybczynski.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/ryb.czy.nski.studio" target="_blank">@ryb.czy.nski.studio</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Jan Rybczynski "yawn rib-chin-ski" [b.2001] s a multi-disciplinary artist who recently graduated from the Rhode Island School of Design, with a degree in Furniture Design and a concentration in Nature, Culture, and Sustainability Studies. Born and raised in Boulder, Colorado, Jan holds a deep appreciation for the beauty within the natural world in all of its subtle complexity. Spanning from furniture to sculpture, his work is inspired by the physical attributes of the nine biomes of Earth and the beings which inhabit them, employing materials that lend themselves to the craftsmanship and physical process required to work them. The resulting work provokes the limits of material and process, drawing out the harmonious relationship between craft and the inherent beauty of the environment. Through continued exploration, Jan aims to build a sustainable practice which meshes material, process, and historical/cultural context. A structure which will allow him to create work while treating the environment with kindness and respect, make room for the lifelong study of craft. In addition, Jan is currently serving as a Student Trustee on the board of directors for the <a href="https://furnsoc.org/">Furniture Society</a> while continuing to build his practice.
+			</div>
+
+			
+				<div class="maker-links">
+					<a href="/conversations/jan-rybczynski/">Craft as Material History</a>
+					<a href="/participatory-invitations/jan-rybczynski/">PLACEHOLDER</a>
+					<a href="/extended-notes/jan-rybczynski/">A Collection by Jan Rybczynski</a>
+				</div>
+			
+		</div>
+		
+			<div class="maker" data-categories="Sculpture, Ceramics, Printmaking" id="ariel-wood">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Ariel-Wood.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Ariel-Wood.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Ariel Wood <span>they/them</span></h2>
+					<p>undefined</p>
+					<p>Austin, TX, USA</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://ariel-wood-art.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/arielrw" target="_blank">@arielrw</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Ariel Wood [b.1994] is a Texas-based artist by way of California and Wisconsin. They received a BFA in printmaking and drawing from The University of Wisconsin, Madison 2016, a Post-Baccalaureate Certificate from Santa Reparata International School Of Art, in Florence 2016, and their MFA in Sculpture from The University of Texas at Austin 2022, where they were the recipient of the Lomis Slaughter, Jr. Endowment Scholarship In Sculpture and the Continuing College Fellowship. In 2022, Wood attended <a href="https://www.watershedceramics.org/residencies/">Watershed Ceramics’ Summer Residency</a> and in 2023, they were a finalist for the Alice C. Cole Fellowship. They have exhibited their work nationally and internationally in Wisconsin, Illinois, Texas, New York, and Florence, Italy.
+			</div>
+
+			
+				<div class="maker-links">
+					<a href="/conversations/ariel-wood/">Craft as Potentially Non-Symmetrical and Non-Functional</a>
+					<a href="/participatory-invitations/ariel-wood/">Alchemical Vessel</a>
+					<a href="/extended-notes/ariel-wood/">A Collection by Ariel Wood</a>
+				</div>
+			
+		</div>
+		
+			<div class="maker" data-categories="" id="zoe-pulley">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Zoë-Pulley.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Zoë-Pulley.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Zoë Pulley <span>she/her</span></h2>
+					<p>undefined</p>
+					<p>Brooklyn, NY, USA</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://zoepulley.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/zpulley" target="_blank">@zpulley</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Zoë Pulley [b.1993] is a designer and maker who utilizes stuff to surface the seemingly ordinary stories of Black folks through mixed media, typography, and audio. She defines “stuff” as artifacts both physical and nonphysical that may be relegated as unimportant to some—as merely stuff. Most recently, Pulley has shown work  in a group exhibition, <em><a href="https://newportartmuseum.org/exhibitions/dress-code/">Dress Code</a></em> at the Newport Art Museum and a performance at RISD Museum. Her practice includes ongoing collaborations such as a wearable line inspired by her grandmother called <a href="https://www.gransans.com/">GRAN SANS</a> and a collectively authored publication titled <a href="https://www.blackjoyarchive.com/">Black Joy Archive</a>. In 2021 she designed a zine for <em>Combahee’s Radical Call: Black Feminisms (re)Awaken Boston</em> at the Boston Center for the Arts. Her work is held in the collections of The Valentine Museum, the Hardvard Radcliffe Institute, and Printed Matter. Pulley is an inaugural recipient of the Rhode Island School of Design Society of Presidential Fellowship and was awarded the <a href="https://gdusa.com/studentstowatch2023/zoe-pulley">Graduate Graphic Designer to Watch by GDUSA</a> in 2023. She earned a BFA from Virginia Commonwealth University in 2015 and an MFA in graphic design from Rhode Island School of Design. Pulley is currently an Artist-In-Residence at <a href="https://www.studiomuseum.org/">The Studio Museum In Harlem</a>.
+			</div>
+
+			
+		</div>
+		
+			<div class="maker" data-categories="Burlesque" id="boo-boo-darlin">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/BooBoo-Darlin.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/BooBoo-Darlin.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Boo Boo Darlin' <span>she/her</span></h2>
+					<p>undefined</p>
+					<p>Germantown, NY, USA</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://booboodarlin.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/booboodarlin" target="_blank">@booboodarlin</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Boo Boo Darlin' “the fun time Gal” [b.1983] provides the right combination of sexy and funny to the burlesque stage! She is Virginia grown and Brooklyn honed and has been popping pasties and prosecco since 2009. She got her start performing Richmond Virginia with Sugar Shack Burlesque and producing the monthly show Richmond Varietease before moving to the big apple. Since then she has become an international sensation receiving such esteemed awards as the Rome's 2014 Porcapapessa Award for the Caput Mundi Intertantional Burlesque Festival, 2017 & 2018 “Biggest Lebowski” award at Burlesque Hall of Fame Weekender, and 7 golden pastie awards over her 10 years performing in the much loved <a href="https://thenewyorkburlesquefestival.com/">New York Burlesque Festival</a>. You can find Boo Boo performing regularly at a legendary burlesque homes such as The Slipper Room, Bathtub Gin, Joe’s Pub, & Coney Island’s Burlesque at The Beach.
+			</div>
+
+			
+		</div>
+		
+			<div class="maker" data-categories="Digital Media, Technology" id="frederico-perez-villoro">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Federico-Pérez-Villoro.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Federico-Pérez-Villoro.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Federico Pérez Villoro <span>he/him</span></h2>
+					<p>undefined</p>
+					<p>Mexico City, Mexico</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://federicoperezvilloro.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/federicoperezvilloro" target="_blank">@federicoperezvilloro</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Federico Pérez Villoro [b.1987] is an artist and researcher living and working in Mexico City. Through texts, performances, and digital artifacts, Federico explores the ways in which state, corporate and institutional authority is expressed technologically. His work has been exhibited internationally and published by The Serving Library, Printed Matter, C Magazine, diSONARE, Gato Negro Ediciones and the Walker Art Center’s The Gradient. His investigations have also been featured in journalistic outlets such as Quinto Elemento Lab, The New York Times, Aristegui Noticias among others. Federico has taught at the Rhode Island School of Design and California College of the Arts and lectured at schools such as ETH Zurich, Rutgers University, CalArts, The New School, UNAM, Escuela de Artes Jalisco, and Hongik University. In addition, Federico has advanced a number of experimental educational initiatives. In 2019 he founded <a href="https://materiaabierta.com/">Materia Abierta</a>, a summer school on theory, art, and technology in Mexico City that has been developed with the support of Casa del Lago UNAM, Museo Tamayo, Museo Universitario Arte Contemporáneo (MUAC), KADIST, among other organizations. In 2023 he received the Grant Program from the <a href="https://www.fundacionjumex.org/en/fundacion/fomento/patrocinios">Jumex Contemporary Art Foundation</a> and was awarded the C/Change Grant from the Goethe-Institut San Francisco and Gray Area. That same year he was a resident at Pivô Pesquisa in São Paulo, Brazil.
+			</div>
+
+			
+		</div>
+		
+			<div class="maker" data-categories="Photography, Writing" id="jonathan-mark-jackson">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Jonathan-Jackson.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Jonathan-Jackson.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Jonathan Mark Jackson <span>he/him</span></h2>
+					<p>undefined</p>
+					<p>Boston, MA, USA</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://jonathanmarkjackson.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/_jmjackson" target="_blank">@_jmjackson</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Jonathan Mark Jackson [b. 1996] received a BA from Amherst College, and a MFA in Photography from the Rhode Island School of Design. He is currently a visiting professor at Boston College.
+			</div>
+
+			
+				<div class="maker-links">
+					<a href="/conversations/jonathan-mark-jackson/">Craft as Subject to Chance</a>
+					<a href="/participatory-invitations/jonathan-mark-jackson/">PLACEHOLDER</a>
+					<a href="/extended-notes/jonathan-mark-jackson/">A Collection by Jonathan Mark Jackson</a>
+				</div>
+			
+		</div>
+		
+			<div class="maker" data-categories="Sculpture, Photography, Filmmaking" id="sameer-farooq">
+			<div class="maker-img">
+				<img src="/assets/bios/regular/Sameer-Farooq.jpg" class="maker-img-normal">
+				<img src="/assets/bios/hover/Sameer-Farooq.jpg" class="maker-img-hover">
+			</div>
+
+			<div class="maker-info">
+				<div class="maker-info-left">
+					<h2>Sameer Farooq <span>he/him</span></h2>
+					<p>undefined</p>
+					<p>Toronto, Canada</p>
+				</div>
+				<div class="maker-info-right">
+					<a href="https://www.sameerfarooq.com" target="_blank">Website</a>
+					<a href="https://www.instagram.com/studiosameerfarooq" target="_blank">@studiosameerfarooq</a>
+				</div>
+			</div>
+
+			<div class="maker-bio">
+				Sameer Farooq [b. 1987] is a Canadian artist of Pakistani and Ugandan Indian descent. With a versatile approach that shifts between sculpture, photography, documentary film, and anthropological methods, he expands the ways through which museums have written and narrated the past. Sameer Farooq has held exhibitions at institutions around the world including the Venice Architecture Biennale (2023), Rijksmuseum van Oudheden, Leiden (2023), Walter Phillips Gallery, Banff (2023), Dalhousie Art Gallery, Halifax (2023), Fonderie Darling, Montréal (2022); Susan Hobbs, Toronto (2022); Koffler Gallery, Toronto (2021); Patel Brown, Toronto (2021); Lilley Museum, Reno (2019); Aga Khan Museum, Toronto (2017); Institute of Islamic Culture, Paris (2017); Contemporary Art Gallery, Vancouver (2016); The British Library, London (2015); Maquis Projects, Izmir (2015); Artellewa, Cairo (2014); and the Art Gallery of Ontario, Toronto (2011). Reviews dedicated to his work have been published by Art Forum, Canadian Art, The Washington Post, BBC Culture, Hyperallergic, Artnet, The Huffington Post, and C Magazine. He is an alumnus of the prestigious <a href="https://www.bemiscenter.org/residency">Bemis Center Residency</a>.
+			</div>
+
+			
+		</div>
+		
+			</main>
+		
+			<script src="makers.js"></script>
+			<script src="/marquee.js"></script>
+		</body>
+		</html>
 	
-	<nav class="nav">
-		<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
-		<div class="nav-links">
-			<div class="nav-filter-toggle" onclick="toggleFilters()">
-				<span>Filter</span>
-				<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
-			</div>
-			<a href="/primary-index/" class="nav-link">Primary Index</a>
-			<a href="/makers/" class="nav-link" data-active="1">Makers</a>
-			<a href="/library/" class="nav-link">Library</a>
-			<a href="/about/" class="nav-link">About</a>
-		</div>
-	</nav>
-
-	<div class="nav-filters" data-active="0">
-		<h2 class="nav-filters-heading">Selected Medium</h2>
-		<div class="nav-filters-list">
-			<div class="nav-filter" data-filter="ceramics" onclick="toggleFilter('ceramics')">Ceramics</div>
-			<div class="nav-filter" data-filter="fibers" onclick="toggleFilter('fibers')">Fibers</div>
-			<div class="nav-filter" data-filter="glass" onclick="toggleFilter('glass')">Glass</div>
-			<div class="nav-filter" data-filter="language" onclick="toggleFilter('language')">Language</div>
-			<div class="nav-filter" data-filter="metals" onclick="toggleFilter('metals')">Metals</div>
-			<div class="nav-filter" data-filter="needlework" onclick="toggleFilter('needlework')">Needlework</div>
-			<div class="nav-filter" data-filter="paper" onclick="toggleFilter('paper')">Paper</div>
-			<div class="nav-filter" data-filter="printing" onclick="toggleFilter('printing')">Printing</div>
-			<div class="nav-filter" data-filter="sculpture" onclick="toggleFilter('sculpture')">Sculpture</div>
-			<div class="nav-filter" data-filter="woodworking" onclick="toggleFilter('woodworking')">Woodworking</div>
-			<div class="nav-filter-clear" onclick="clearFilters();">X</div>
-		</div>
-	</div>
-
-	<main class="makers">
-		<div class="maker" data-categories="test1,test2,test3" id="georgia-cloepfil">
-			<div class="maker-img">
-				<img src="/assets/bios/regular/Georgia-Cloepfil.png" class="maker-img-normal">
-				<img src="/assets/bios/hover/Georgia-Cloepfil-Hover.png" class="maker-img-hover">
-			</div>
-
-			<div class="maker-info">
-				<div class="maker-info-left">
-					<h2>Georgia Cloepfil <span>she/her</span></h2>
-					<p>Writer • Coach • Professor</p>
-					<p>Based in Walla Walla, WA</p>
-				</div>
-				<div class="maker-info-right">
-					<a href="/" target="_blank">Website</a>
-					<a href="/" target="_blank">@GeorgiaCLOEPFIL</a>
-				</div>
-			</div>
-
-			<div class="maker-bio">
-				<p>
-					Georgia Cloepfil [b. 1992] is a writer and former professional soccer player from Oregon. Her nonfiction debut, <em><a href="" target="_blank">The Striker and the Clock</a></em>, is forthcoming in 2024 from Riverhead (U.S.) and Bloomsbury (U.K.). Her other writing can be found in The Yale Review, The New York Times Magazine, The Washington Post, n+1, Colorado Review, Joyland and Epiphany among other places. Select essays have been featured on Longreads, The Rumpus, and WBUR Boston’s Only a Game. She holds an MFA from the University of Idaho and works at Whitman College.
-				</p>
-			</div>
-
-			<div class="maker-links">
-				<a href="/">Craft as Channeling Voice</a>
-				<a href="/">Never Stop Reading</a>
-				<a href="/">Special Pens</a>
-			</div>
-		</div>
-
-		<div class="maker" data-categories="test1,test2,test3" id="georgia-cloepfil">
-			<div class="maker-img">
-				<img src="/assets/bios/regular/Georgia-Cloepfil.png" class="maker-img-normal">
-				<img src="/assets/bios/hover/Georgia-Cloepfil-Hover.png" class="maker-img-hover">
-			</div>
-
-			<div class="maker-info">
-				<div class="maker-info-left">
-					<h2>Georgia Cloepfil <span>she/her</span></h2>
-					<p>Writer • Coach • Professor</p>
-					<p>Based in Walla Walla, WA</p>
-				</div>
-				<div class="maker-info-right">
-					<a href="/" target="_blank">Website</a>
-					<a href="/" target="_blank">@GeorgiaCLOEPFIL</a>
-				</div>
-			</div>
-
-			<div class="maker-bio">
-				<p>
-					Georgia Cloepfil [b. 1992] is a writer and former professional soccer player from Oregon. Her nonfiction debut, <em><a href="" target="_blank">The Striker and the Clock</a></em>, is forthcoming in 2024 from Riverhead (U.S.) and Bloomsbury (U.K.). Her other writing can be found in The Yale Review, The New York Times Magazine, The Washington Post, n+1, Colorado Review, Joyland and Epiphany among other places. Select essays have been featured on Longreads, The Rumpus, and WBUR Boston’s Only a Game. She holds an MFA from the University of Idaho and works at Whitman College.
-				</p>
-			</div>
-
-			<div class="maker-links">
-				<a href="/">Craft as Channeling Voice</a>
-				<a href="/">Never Stop Reading</a>
-				<a href="/">Special Pens</a>
-			</div>
-		</div>
-		
-		<div class="maker" data-categories="test1,test2,test3" id="georgia-cloepfil">
-			<div class="maker-img">
-				<img src="/assets/bios/regular/Georgia-Cloepfil.png" class="maker-img-normal">
-				<img src="/assets/bios/hover/Georgia-Cloepfil-Hover.png" class="maker-img-hover">
-			</div>
-
-			<div class="maker-info">
-				<div class="maker-info-left">
-					<h2>Georgia Cloepfil <span>she/her</span></h2>
-					<p>Writer • Coach • Professor</p>
-					<p>Based in Walla Walla, WA</p>
-				</div>
-				<div class="maker-info-right">
-					<a href="/" target="_blank">Website</a>
-					<a href="/" target="_blank">@GeorgiaCLOEPFIL</a>
-				</div>
-			</div>
-
-			<div class="maker-bio">
-				<p>
-					Georgia Cloepfil [b. 1992] is a writer and former professional soccer player from Oregon. Her nonfiction debut, <em><a href="" target="_blank">The Striker and the Clock</a></em>, is forthcoming in 2024 from Riverhead (U.S.) and Bloomsbury (U.K.). Her other writing can be found in The Yale Review, The New York Times Magazine, The Washington Post, n+1, Colorado Review, Joyland and Epiphany among other places. Select essays have been featured on Longreads, The Rumpus, and WBUR Boston’s Only a Game. She holds an MFA from the University of Idaho and works at Whitman College.
-				</p>
-			</div>
-
-			<div class="maker-links">
-				<a href="/">Craft as Channeling Voice</a>
-				<a href="/">Never Stop Reading</a>
-				<a href="/">Special Pens</a>
-			</div>
-		</div>
-		
-		<div class="maker" data-categories="test1,test2,test3" id="georgia-cloepfil">
-			<div class="maker-img">
-				<img src="/assets/bios/regular/Georgia-Cloepfil.png" class="maker-img-normal">
-				<img src="/assets/bios/hover/Georgia-Cloepfil-Hover.png" class="maker-img-hover">
-			</div>
-
-			<div class="maker-info">
-				<div class="maker-info-left">
-					<h2>Georgia Cloepfil <span>she/her</span></h2>
-					<p>Writer • Coach • Professor</p>
-					<p>Based in Walla Walla, WA</p>
-				</div>
-				<div class="maker-info-right">
-					<a href="/" target="_blank">Website</a>
-					<a href="/" target="_blank">@GeorgiaCLOEPFIL</a>
-				</div>
-			</div>
-
-			<div class="maker-bio">
-				<p>
-					Georgia Cloepfil [b. 1992] is a writer and former professional soccer player from Oregon. Her nonfiction debut, <em><a href="" target="_blank">The Striker and the Clock</a></em>, is forthcoming in 2024 from Riverhead (U.S.) and Bloomsbury (U.K.). Her other writing can be found in The Yale Review, The New York Times Magazine, The Washington Post, n+1, Colorado Review, Joyland and Epiphany among other places. Select essays have been featured on Longreads, The Rumpus, and WBUR Boston’s Only a Game. She holds an MFA from the University of Idaho and works at Whitman College.
-				</p>
-			</div>
-
-			<div class="maker-links">
-				<a href="/">Craft as Channeling Voice</a>
-				<a href="/">Never Stop Reading</a>
-				<a href="/">Special Pens</a>
-			</div>
-		</div>
-		
-		<div class="maker" data-categories="test1,test2,test3" id="georgia-cloepfil">
-			<div class="maker-img">
-				<img src="/assets/bios/regular/Georgia-Cloepfil.png" class="maker-img-normal">
-				<img src="/assets/bios/hover/Georgia-Cloepfil-Hover.png" class="maker-img-hover">
-			</div>
-
-			<div class="maker-info">
-				<div class="maker-info-left">
-					<h2>Georgia Cloepfil <span>she/her</span></h2>
-					<p>Writer • Coach • Professor</p>
-					<p>Based in Walla Walla, WA</p>
-				</div>
-				<div class="maker-info-right">
-					<a href="/" target="_blank">Website</a>
-					<a href="/" target="_blank">@GeorgiaCLOEPFIL</a>
-				</div>
-			</div>
-
-			<div class="maker-bio">
-				<p>
-					Georgia Cloepfil [b. 1992] is a writer and former professional soccer player from Oregon. Her nonfiction debut, <em><a href="" target="_blank">The Striker and the Clock</a></em>, is forthcoming in 2024 from Riverhead (U.S.) and Bloomsbury (U.K.). Her other writing can be found in The Yale Review, The New York Times Magazine, The Washington Post, n+1, Colorado Review, Joyland and Epiphany among other places. Select essays have been featured on Longreads, The Rumpus, and WBUR Boston’s Only a Game. She holds an MFA from the University of Idaho and works at Whitman College.
-				</p>
-			</div>
-
-			<div class="maker-links">
-				<a href="/">Craft as Channeling Voice</a>
-				<a href="/">Never Stop Reading</a>
-				<a href="/">Special Pens</a>
-			</div>
-		</div>
-	</main>
-
-	<script src="makers.js"></script>
-</body>
-</html>

@@ -49,17 +49,29 @@ World.add(world, [
 ]);
 
 var stack = [];
-for (let i=0; i<10; i++) {
-	let body = Bodies.rectangle(Math.random()*1800+100, -Math.random()*500, 200, 300, {
+let images = [
+	['AWood_Home.jpg', 400/2, 600/2],
+	['BBDarlin_Home.jpg', 600/2, 400/2],
+	['FVilloro_Home.jpg', 480/2, 600/2],
+	['GCloepfil_Home.jpg', 380/2, 600/2],
+	['JChodosh_Home.jpg', 600/2, 400/2],
+	['JJackson_Home.jpg', 480/2, 600/2],
+	['JSherman_Home.jpg', 600/2, 400/2],
+	['SFarooq_Home.jpg', 600/2, 430/2],
+	['TGoldenberg_Home.jpg', 430/2, 600/2],
+	['ZPulley_Home.jpg', 600/2, 400/2]
+]
+for (let i=0; i<images.length; i++) {
+	let body = Bodies.rectangle(Math.random()*1800+100, -Math.random()*500-500, images[i][1], images[i][2], {
 		render: {
 			sprite: {
-				texture: '/test.png',
+				texture: `/assets/homepage/${images[i][0]}`,
 				xScale: .5,
 				yScale: .5
 			}
 		},
 		angle: Math.round(Math.random()*100),
-		friction: 0.2
+		// friction: 0.2
 	});
 	stack.push(body);
 }
