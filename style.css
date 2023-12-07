@@ -733,12 +733,16 @@ body {
 /* LIBRARY */
 /* ———————————————————————————————————————————————— */
 .library-container {
-	max-width: 100vw;
-	overflow-x: scroll;
+	width: 100vw;
 	min-height: 100dvh;
 }
 .library {
 	min-width: 1000px;
+}
+@media only screen and (max-width: 1000px) {
+	.library-container {
+		overflow-x: scroll;
+	}
 }
 
 /* Library nav */
@@ -797,6 +801,8 @@ body {
 /* Library content */
 .library-content {
 	background-color: var(--lightgray);
+	display: flex;
+	flex-direction: column;
 }
 .library-item {
 	border-bottom: 1px solid black;

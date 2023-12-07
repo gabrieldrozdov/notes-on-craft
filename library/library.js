@@ -55,7 +55,8 @@ function clearFilters() {
 
 // Sort items
 let sortCategory = 'title';
-let sortMode = 'ascending';
+let sortMode = 'descending';
+sortCategory('title');
 function sortLibrary(category) {
 	for (let sortToggle of document.querySelectorAll('.library-nav-col')) {
 		sortToggle.dataset.active = 0;
@@ -76,28 +77,81 @@ function sortLibrary(category) {
 		activeToggle.dataset.active = 1;
 	}
 
-	// Do the actual sorting TODO
-	let sortList = [];
+	// Do the actual sorting
 	if (category == 'title') {
+		let titles = [];
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			titles.push(libraryItem.dataset.title);
+		}
+
+		titles.sort();
+		if (sortMode == 'ascending') {
+			titles.reverse();
+		}
+
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			libraryItem.style.order = titles.indexOf(libraryItem.dataset.title);
+		}
 
 	} else if (category == 'lastname') {
+		let lastnames = [];
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			lastnames.push(libraryItem.dataset.lastname);
+		}
+
+		lastnames.sort();
+		if (sortMode == 'ascending') {
+			lastnames.reverse();
+		}
+
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			libraryItem.style.order = lastnames.indexOf(libraryItem.dataset.lastname);
+		}
 
 	} else if (category == 'firstname') {
+		let firstnames = [];
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			firstnames.push(libraryItem.dataset.firstname);
+		}
+
+		firstnames.sort();
+		if (sortMode == 'ascending') {
+			firstnames.reverse();
+		}
+
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			libraryItem.style.order = firstnames.indexOf(libraryItem.dataset.firstname);
+		}
 		
 	} else if (category == 'source') {
+		let sources = [];
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			sources.push(libraryItem.dataset.source);
+		}
+
+		sources.sort();
+		if (sortMode == 'ascending') {
+			sources.reverse();
+		}
+
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			libraryItem.style.order = sources.indexOf(libraryItem.dataset.source);
+		}
 		
 	} else if (category == 'year') {
-		
-	}
+		let years = [];
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			years.push(libraryItem.dataset.year);
+		}
 
-	if (sortMode == 'ascending') {
-		sortList.reverse();
-	}
-	let orderTrack = 0;
-	for (let listItem of sortList) {
-		let libraryItem = document.querySelector(`.library-item[data-id="${listItem}"`);
-		libraryItem.style.order = orderTrack;
-		orderTrack++;
+		years.sort();
+		if (sortMode == 'ascending') {
+			years.reverse();
+		}
+
+		for (let libraryItem of document.querySelectorAll('.library-item')) {
+			libraryItem.style.order = years.indexOf(libraryItem.dataset.year);
+		}
 	}
 }
 

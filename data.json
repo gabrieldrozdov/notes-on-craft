@@ -38,7 +38,12 @@
     "invitation-title": "Blank Pages",
     "invitation-img": "GCloepfil_PI_Thumb.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>A big white blank sheet of paper on the wall.</li>\n<li>Books that change depending on the project</li>\n<li>Notebook</li>\n<li>Pilot V5 Pen</li>",
+    "invitation-tools": [
+      "A big white blank sheet of paper on the wall.",
+      "Books that change depending on the project",
+      "Notebook",
+      "Pilot V5 Pen"
+    ],
     "invitation-img2": "GCloepfil_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -83,7 +88,9 @@
     "invitation-title": "Fewer Tools, More Environment",
     "invitation-img": "TGoldenberg_PI_Thumb.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>PLACEHOLDER</li>",
+    "invitation-tools": [
+      "PLACEHOLDER"
+    ],
     "invitation-img2": "TGoldenberg_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -128,7 +135,12 @@
     "invitation-title": "Containers for Comic Relief",
     "invitation-img": "JSherman_PI_Thumb.jpg",
     "invitation-mediums": "Graphic Storytelling • Drawing • Writing",
-    "invitation-tools": "<li>Lightbox</li>\n<li>Micron Ruler</li>\n<li>Non-Photo Blue Pencil</li>\n<li>X-ACTO Knife</li>",
+    "invitation-tools": [
+      "Lightbox",
+      "Micron Ruler",
+      "Non-Photo Blue Pencil",
+      "X-ACTO Knife"
+    ],
     "invitation-img2": "JSherman_PI.svg",
     "invitation-input": "<p>Collect any miscellaneous scrap paper around your house or neighborhood—grocery circulars, wrapping paper, free newspapers, parking tickets, laundry tickets, really long receipts.</p>\n\n<p>If more easily at your disposal, gather picture books from the sidewalk or cheap $1 racks. Be sure that you feel willing to cut these up and take them apart.</p>",
     "invitation-action": "<p>Sift through your collection for a pair of phrases. Maybe they make you laugh or recall a memory.</p> \n\n<p>Center a 4-8 panel comic around these phrases.</p>\n\n<p>Use other elements in your collection as tracing surfaces or materials for collage.</p>",
@@ -173,7 +185,9 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "JRybczynski_PI_Thumb.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>PLACEHOLDER</li>",
+    "invitation-tools": [
+      "PLACEHOLDER"
+    ],
     "invitation-img2": "JRybczynski_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -218,7 +232,16 @@
     "invitation-title": "Alchemical Vessel",
     "invitation-img": "AWood_PI_Thumb.jpg",
     "invitation-mediums": "Ceramics • Sculpture",
-    "invitation-tools": "<li>Corded Drill [for mixing large batches of paper mache clay]</li>\n<li>Gridded Notepad Paper</li>\n<li>Kemper Trimming Tools</li>\n<li>Kobalt Utility Knife</li>\n<li>Orbital Sander</li>\n<li>Serrated Metal Kidney</li>\n<li>Shimpo Whisper Wheel</li>\n<li>Tape Measure</li>",
+    "invitation-tools": [
+      "Corded Drill [for mixing large batches of paper mache clay]",
+      "Gridded Notepad Paper",
+      "Kemper Trimming Tools",
+      "Kobalt Utility Knife",
+      "Orbital Sander",
+      "Serrated Metal Kidney",
+      "Shimpo Whisper Wheel",
+      "Tape Measure"
+    ],
     "invitation-img2": "AWood_PI.svg",
     "invitation-input": "Take note of something that is circular and geometric in the built environment.",
     "invitation-action": "<p>Document its formal qualities.</p>\n\n<li>Capture it with photos.</li>\n<li>Collect it and scan it, if possible.</li>\n\n<p>Mold its components into something asymmetrical, imperfect, demonstrating the presence of the human hand. </p>\n\n<p>Make a dent or void in your material.</p>\n\n<p>Poke holes.</p>\n\n<p>Remove elements.</p>\n\n<p>Recompose them. </p>",
@@ -263,7 +286,9 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "JChodosh_PI.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>PLACEHOLDER</li>",
+    "invitation-tools": [
+      "PLACEHOLDER"
+    ],
     "invitation-img2": "JChodosh_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -308,7 +333,9 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "ZPulley_PI.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>PLACEHOLDER</li>",
+    "invitation-tools": [
+      "PLACEHOLDER"
+    ],
     "invitation-img2": "ZPulley_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -353,7 +380,9 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "BBDarlin_PI.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>PLACEHOLDER</li>",
+    "invitation-tools": [
+      "PLACEHOLDER"
+    ],
     "invitation-img2": "BBDarlin_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -398,7 +427,15 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "FVilloro_PI.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>Bialetti Coffee Maker</li>\n<li>Firefox</li>\n<li>Google Docs</li>\n<li>Google Sheets</li>\n<li>Macbook pro</li>\n<li>Yoga mat</li>\n<li>Whatsapp</li>",
+    "invitation-tools": [
+      "Bialetti Coffee Maker",
+      "Firefox",
+      "Google Docs",
+      "Google Sheets",
+      "Macbook pro",
+      "Yoga mat",
+      "Whatsapp"
+    ],
     "invitation-img2": "FVilloro_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -443,7 +480,9 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "CKerwin_PI.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>PLACEHOLDER</li>",
+    "invitation-tools": [
+      "PLACEHOLDER"
+    ],
     "invitation-img2": "CKerwin_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -488,7 +527,9 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "NMartino_PI.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>PLACEHOLDER</li>",
+    "invitation-tools": [
+      "PLACEHOLDER"
+    ],
     "invitation-img2": "NMartino_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -533,7 +574,15 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "JMJackson_PI.jpg",
     "invitation-mediums": "Photography",
-    "invitation-tools": "<li>8x10 view camera</li>\n<li>35mm camera</li>\n<li>A shelf of totems/special little objects</li>\n<li>Fountain pens</li>\n<li>Jamaica Kincaid’s “My Garden Book”</li>\n<li>Small notebooks</li>\n<li>Various scanners</li>",
+    "invitation-tools": [
+      "8x10 view camera",
+      "35mm camera",
+      "A shelf of totems/special little objects",
+      "Fountain pens",
+      "Jamaica Kincaid’s “My Garden Book”",
+      "Small notebooks",
+      "Various scanners"
+    ],
     "invitation-img2": "JMJackson_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",
@@ -578,7 +627,17 @@
     "invitation-title": "PLACEHOLDER",
     "invitation-img": "Sameer-Farooq_PI.jpg",
     "invitation-mediums": "PLACEHOLDER",
-    "invitation-tools": "<li>Camera</li>\n<li>Clay</li>\n<li>Computer</li>\n<li>Cutting tool</li>\n<li>Flatbed Scanner</li>\n<li>Notebook</li>\n<li>Plaster</li>\n<li>Printer</li>\n<li>Water</li>",
+    "invitation-tools": [
+      "Camera",
+      "Clay",
+      "Computer",
+      "Cutting tool",
+      "Flatbed Scanner",
+      "Notebook",
+      "Plaster",
+      "Printer",
+      "Water"
+    ],
     "invitation-img2": "Sameer-Farooq_PI.svg",
     "invitation-input": "<p>PLACEHOLDER</p>",
     "invitation-action": "<p>PLACEHOLDER</p>",

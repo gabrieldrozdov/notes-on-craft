@@ -401,7 +401,7 @@ function generateLibrary() {
 		}
 
 		libraryItems += `
-			<div class="library-item" data-categories="${entry['categories']}" onclick="focusLibraryItem(this)">
+			<div class="library-item" data-categories="${entry['categories']}" onclick="focusLibraryItem(this)" data-title="${entry['title']}" data-lastname="${entry['lastname']}" data-firstname="${entry['firstname']}" data-source="${entry['source']}" data-year="${entry['year']}">
 				<div class="library-item-info">
 					<div>${entry['title']}</div>
 					<div>${entry['lastname']}</div>
@@ -586,7 +586,16 @@ function generateSubpages() {
 
 
 		// PARTICIPATORY INVITATIONS
-		// TODO: toolkits list
+		let toolkit = '';
+		for (let line of entry['invitation-tools']) {
+			toolkit += `
+				<div>
+					<svg viewBox="0 0 24 24"><path d="m17.554,12l-9.108-6.761v13.522l9.108-6.761Z"/></svg>
+					<span>${line}</span>
+				</div>
+			`
+		}
+
 
 		invitationContent = `
 			<!DOCTYPE html>
@@ -625,22 +634,7 @@ function generateSubpages() {
 								<div class="invitations-toolkit">
 									<h3 class="invitations-toolkit-title">Toolkit</h3>
 									<div class="invitations-toolkit-list">
-										<div>
-											<svg viewBox="0 0 24 24"><path d="m17.554,12l-9.108-6.761v13.522l9.108-6.761Z"/></svg>
-											<span>Lightbox</span>
-										</div>
-										<div>
-											<svg viewBox="0 0 24 24"><path d="m17.554,12l-9.108-6.761v13.522l9.108-6.761Z"/></svg>
-											<span>Lightbox</span>
-										</div>
-										<div>
-											<svg viewBox="0 0 24 24"><path d="m17.554,12l-9.108-6.761v13.522l9.108-6.761Z"/></svg>
-											<span>Lightbox</span>
-										</div>
-										<div>
-											<svg viewBox="0 0 24 24"><path d="m17.554,12l-9.108-6.761v13.522l9.108-6.761Z"/></svg>
-											<span>Lightbox</span>
-										</div>
+										${toolkit}
 									</div>
 									<img src="/assets/participatory-invitations/
 									${entry['invitation-img2']}" class="invitations-toolkit-img">
