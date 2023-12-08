@@ -407,6 +407,9 @@ body {
 .index-link-title h4 {
 	font-family: 'Ballinger';
 	font-weight: normal;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 	font-size: 14px;
 	line-height: 1em;
 	padding: 4px 8px 5px 8px;

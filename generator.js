@@ -11,7 +11,7 @@ function generatePrimaryIndex() {
 	for (let i=0; i<Object.keys(jsonData).length; i++) {
 		let entry = jsonData[i];
 		if (entry['generate-subpages'] != 1) {
-			break
+			continue
 		}
 
 		for (let category of entry['categories'].split(',')) {

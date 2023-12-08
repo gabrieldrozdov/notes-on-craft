@@ -182,5 +182,5 @@ function generateSidebarContent(name) {
 	console.log(1)
 }
 
-
-generateSidebar('georgia-cloepfil');
+let url = window.location.href.split('/');
+generateSidebar(url[url.length-2]);
