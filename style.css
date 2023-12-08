@@ -1,11 +1,19 @@
 @font-face {
 	font-family: 'Bradford';
 	src: url('assets/fonts/BradfordLL-Light.otf');
+	font-weight: 300;
 }
 @font-face {
 	font-family: 'Bradford';
 	src: url('assets/fonts/BradfordLL-LightItalic.otf');
 	font-style: italic;
+	font-weight: 300;
+}
+@font-face {
+	font-family: 'Bradford';
+	src: url('assets/fonts/BradfordLL-BookItalic.otf');
+	font-style: italic;
+	font-weight: 400;
 }
 @font-face {
 	font-family: 'Ballinger';
@@ -58,6 +66,7 @@ body {
 	overflow: hidden;
 	gap: var(--gap);
 	font-family: 'Bradford';
+	font-weight: 300;
 	font-style: italic;
 	font-size: 24px;
 	line-height: 1.2em;
@@ -79,7 +88,7 @@ body {
 	justify-content: space-around;
 	gap: var(--gap);
 	min-width: 100%;
-	animation: scroll 20s linear infinite;
+	animation: scroll 40s linear infinite;
 }
 @keyframes scroll {
 	from {
@@ -266,10 +275,10 @@ body {
 	display: grid;
 	width: 100vw;
 	overflow-x: scroll;
-	grid-template-columns: 240px 500px;
+	grid-template-columns: 240px 400px;
 	grid-template-rows: 0fr .5fr 0fr .5fr;
 	grid-auto-flow: column;
-	grid-auto-columns: 500px;
+	grid-auto-columns: 400px;
 	padding-right: 100vw;
 	scroll-snap-type: x mandatory;
 	background-color: var(--darkgray);
@@ -432,6 +441,7 @@ body {
 .index-link-quote-text {
 	font-size: 24px;
 	font-family: 'Bradford', serif;
+	font-weight: 300;
 	font-style: italic;
 	line-height: 1.2em;
 }
@@ -467,6 +477,7 @@ body {
 }
 .index-link-notes-quote-text {
 	font-family: 'Bradford';
+	font-weight: 400;
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1.1em;
@@ -505,7 +516,7 @@ body {
 /* ———————————————————————————————————————————————— */
 .makers {
 	padding: 20px;
-	columns: 5;
+	columns: 4;
 	column-gap: 20px;
 }
 .maker {
@@ -520,20 +531,15 @@ body {
 }
 @media only screen and (max-width: 1200px) {
 	.makers {
-		columns: 4;
+		columns: 3;
 	}
 }
 @media only screen and (max-width: 1000px) {
 	.makers {
-		columns: 3;
-	}
-}
-@media only screen and (max-width: 800px) {
-	.makers {
 		columns: 2;
 	}
 }
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) {
 	.makers {
 		columns: 1;
 	}
@@ -663,6 +669,7 @@ body {
 .about-intro-quote {
 	font-size: 26px;
 	font-family: "Bradford", sans-serif;
+	font-weight: 300;
 	font-style: italic;
 	line-height: 1.2em;
 	letter-spacing: .02em;
@@ -827,7 +834,7 @@ body {
 .library-item-info {
 	display: grid;
 	grid-template-columns: 1.5fr 1fr 1fr 1fr 80px;
-	font-family: 'Ballinger', sans-serif;
+	font-family: 'Ballinger Condensed', sans-serif;
 	font-weight: 400;
 	font-size: 14px;
 	line-height: 1em;
@@ -856,6 +863,9 @@ body {
 	align-items: center;
 	text-transform: uppercase;
 }
+.library-item-links span {
+	padding-top: 2px;
+}
 .library-item-links a {
 	display: inline-block;
 	border: 1px solid black;
@@ -868,8 +878,7 @@ body {
 	padding: 4px 8px 2px 8px;
 }
 .library-item-links a:hover {
-	background-color: black;
-	color: var(--orange);
+	background-color: var(--green);
 }
 .library-item-links a:active {
 	opacity: .5;
@@ -910,7 +919,7 @@ body {
 /* ———————————————————————————————————————————————— */
 .subpage {
 	display: grid;
-	grid-template-columns: 1fr 500px;
+	grid-template-columns: 1fr 400px;
 }
 .subpage-content {
 	max-width: 800px;
@@ -1031,6 +1040,7 @@ body {
 .subpage-sidebar-link-quote-text {
 	font-size: 24px;
 	font-family: 'Bradford', serif;
+	font-weight: 300;
 	font-style: italic;
 	line-height: 1.2em;
 }
@@ -1066,6 +1076,7 @@ body {
 }
 .subpage-sidebar-link-notes-quote-text {
 	font-family: 'Bradford';
+	font-weight: 400;
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1.1em;
@@ -1233,8 +1244,9 @@ body {
 }
 .conversation-body-interviewer {
 	font-family: 'Bradford', serif;
+	font-weight: 300;
 	font-style: italic;
-	font-size: 18px;
+	font-size: 22px;
 	line-height: 1.2em;
 	letter-spacing: .02em;
 }
@@ -1248,6 +1260,7 @@ body {
 .conversation-body-pullout {
 	color: var(--orange);
 	font-family: 'Bradford', serif;
+	font-weight: 300;
 	font-style: italic;
 	font-size: 30px;
 	max-width: 600px;
@@ -1445,6 +1458,9 @@ body {
 	gap: 4px;
 	cursor: pointer;
 	margin-bottom: 1em;
+}
+.notes-body-section-heading h4 {
+	font-weight: 500;
 }
 .notes-body-section-heading:hover {
 	opacity: .5;

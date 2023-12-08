@@ -539,7 +539,7 @@ function generateSubpages() {
 							</div>
 							<div class="conversation-header-info">
 								${entry['pronouns']}<br>
-								${entry['pronouns']}<br>
+								${entry['occupations']}<br>
 								${entry['location']}
 							</div>
 							<p class="conversation-header-bio">
@@ -547,7 +547,7 @@ function generateSubpages() {
 							</p>
 						</header>
 			
-						<h2 class="conversation-body-heading">${entry['fullname']}</h2>
+						<h2 class="conversation-body-heading">${entry['interview-title']}</h2>
 			
 						<div class="conversation-body">
 							<button class="conversation-body-listen" onclick="listenToRecording('/assets/recordings/${entry['soundbite']}')">
