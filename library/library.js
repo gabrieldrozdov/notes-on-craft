@@ -56,7 +56,6 @@ function clearFilters() {
 // Sort items
 let sortCategory = 'title';
 let sortMode = 'descending';
-sortCategory('title');
 function sortLibrary(category) {
 	for (let sortToggle of document.querySelectorAll('.library-nav-col')) {
 		sortToggle.dataset.active = 0;
@@ -85,7 +84,7 @@ function sortLibrary(category) {
 		}
 
 		titles.sort();
-		if (sortMode == 'ascending') {
+		if (sortMode == 'descending') {
 			titles.reverse();
 		}
 
@@ -100,7 +99,7 @@ function sortLibrary(category) {
 		}
 
 		lastnames.sort();
-		if (sortMode == 'ascending') {
+		if (sortMode == 'descending') {
 			lastnames.reverse();
 		}
 
@@ -115,7 +114,7 @@ function sortLibrary(category) {
 		}
 
 		firstnames.sort();
-		if (sortMode == 'ascending') {
+		if (sortMode == 'descending') {
 			firstnames.reverse();
 		}
 
@@ -130,7 +129,7 @@ function sortLibrary(category) {
 		}
 
 		sources.sort();
-		if (sortMode == 'ascending') {
+		if (sortMode == 'descending') {
 			sources.reverse();
 		}
 
@@ -145,7 +144,7 @@ function sortLibrary(category) {
 		}
 
 		years.sort();
-		if (sortMode == 'ascending') {
+		if (sortMode == 'descending') {
 			years.reverse();
 		}
 
@@ -166,3 +165,4 @@ function focusLibraryItem(elmnt) {
 	}
 	elmnt.dataset.active = 1;
 }
+sortLibrary('title');

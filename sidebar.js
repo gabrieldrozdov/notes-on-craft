@@ -179,7 +179,13 @@ function generateSidebarContent(name) {
 
 	const sidebar = document.querySelector('.subpage-sidebar');
 	sidebar.innerHTML = content;
-	console.log(1)
+	
+
+	// Hide related links if nothing there
+	if (relatedLinks.length == 0) {
+		const heading = document.querySelectorAll('.subpage-sidebar-heading')[1];
+		heading.style.display = 'none';		
+	}
 }
 
 let url = window.location.href.split('/');

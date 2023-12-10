@@ -22,9 +22,6 @@ function stopAudio() {
 }
 
 // Slideshow
-for (let slides of document.querySelectorAll('.conversation-body-slides')) {
-
-}
 function prevSlide(elmnt) {
 	let slides = elmnt.querySelectorAll('[data-slide]');
 	for (let slide of slides) {

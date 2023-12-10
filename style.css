@@ -480,7 +480,7 @@ body {
 }
 .index-link-notes-quote-text {
 	font-family: 'Bradford';
-	font-weight: 400;
+	font-weight: 300;
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1.1em;
@@ -557,10 +557,13 @@ body {
 	width: 100%;
 	display: none;
 }
-.maker:hover .maker-img-normal {
+.maker-img {
+	display: block;
+}
+.maker-img-link:hover .maker-img-normal {
 	display: none;
 }
-.maker:hover .maker-img-hover {
+.maker-img-link:hover .maker-img-hover {
 	display: block;
 }
 
@@ -923,6 +926,7 @@ body {
 .subpage {
 	display: grid;
 	grid-template-columns: 1fr 400px;
+	position: relative;
 }
 .subpage-content {
 	max-width: 800px;
@@ -1079,7 +1083,7 @@ body {
 }
 .subpage-sidebar-link-notes-quote-text {
 	font-family: 'Bradford';
-	font-weight: 400;
+	font-weight: 300;
 	font-style: italic;
 	font-size: 18px;
 	line-height: 1.1em;
@@ -1257,7 +1261,7 @@ body {
 	font-family: 'Ballinger', sans-serif;
 	font-size: 16px;
 	font-weight: 400;
-	line-height: 1.2em;
+	line-height: 1.4em;
 	letter-spacing: .02em;
 }
 .conversation-body-pullout {
@@ -1381,7 +1385,7 @@ body {
 	font-family: "Bradford", serif;
 	font-size: 18px;
 	font-style: italic;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.2em;
 	letter-spacing: .02em;
 }
@@ -1438,7 +1442,7 @@ body {
 	font-family: "Bradford", serif;
 	font-size: 18px;
 	font-style: italic;
-	font-weight: 400;
+	font-weight: 300;
 	line-height: 1.2em;
 	letter-spacing: .02em;
 }
@@ -1483,14 +1487,21 @@ body {
 	transform: rotate(180deg);
 }
 .notes-body-section-content {
-	font-family: 'Ballinger Condensed', sans-serif;
+	font-family: 'Ballinger', sans-serif;
 	font-size: 14px;
 	color: black;
-	text-transform: uppercase;
+	/* text-transform: uppercase; */
 	line-height: 1em;
 	display: flex;
 	flex-direction: column;
 	gap: 1em;
+}
+.notes-body-section-content em {
+	font-style: normal;
+	font-weight: 500;
+}
+.notes-body-section-content li {
+	list-style: "—  ";
 }
 .notes-body-section[data-active="0"] .notes-body-section-content {
 	display: none;
@@ -1539,7 +1550,6 @@ body {
 .invitations-toolkit {
 	border: 1px solid black;
 	padding: 20px;
-	position: relative;
 }
 .invitations-toolkit-title {
 	text-transform: uppercase;
@@ -1570,6 +1580,8 @@ body {
 	width: 100%;
 	height: 100%;
 	object-fit: contain;
+	padding-right: 400px;
+	object-position: top;
 	z-index: -1;
 }
 .invitations-body-section {
@@ -1577,18 +1589,21 @@ body {
 	flex-direction: column;
 	gap: 20px;
 	font-family: "Ballinger", sans-serif;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 400;
 	line-height: 1.2em;
 	letter-spacing: .02em;
 }
 .invitations-body-section h3 {
 	font-family: "Ballinger", sans-serif;
-	font-size: 22px;
+	font-size: 20px;
 	font-weight: 500;
 	line-height: 1.2em;
 	letter-spacing: .02em;
 	text-transform: uppercase;
+}
+.invitations-body-section li {
+	list-style: "— ";
 }
 .invitations-body-section p {
 	font-family: "Ballinger", sans-serif;
@@ -1597,9 +1612,21 @@ body {
 	line-height: 1.2em;
 	letter-spacing: .02em;
 }
+@media only screen and (max-width: 1200px) {
+	.invitations-body {
+		grid-template-columns: 1fr;
+		gap: 40px;
+	}
+	.invitations-toolkit-img {
+		padding-right: 300px;
+	}
+}
 @media only screen and (max-width: 800px) {
 	.invitations-body {
 		grid-template-columns: 1fr;
 		gap: 40px;
+	}
+	.invitations-toolkit-img {
+		padding-right: unset;
 	}
 }

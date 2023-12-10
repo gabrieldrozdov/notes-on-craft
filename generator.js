@@ -92,6 +92,7 @@ function generatePrimaryIndex() {
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Notes on Craft | Primary Index</title>
+			<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 			<link rel="stylesheet" href="/style.css">
 		</head>
 		<body>
@@ -226,12 +227,22 @@ function generateMakers() {
 			`;
 		}
 
-		makers += `
-			<div class="maker" data-categories="${entry['categories']}" id="${entry['folder']}">
+		let makerImg = `
 			<div class="maker-img">
 				<img src="/assets/bios/regular/${entry['bio-photo']}" class="maker-img-normal">
-				<img src="/assets/bios/hover/${entry['bio-photo']}" class="maker-img-hover">
 			</div>
+		`;
+		if (entry['generate-subpages'] == 1) {
+			makerImg = `
+				<a class="maker-img-link" href="/conversations/${entry['folder']}/">
+					<img src="/assets/bios/regular/${entry['bio-photo']}" class="maker-img-normal">
+					<img src="/assets/bios/hover/${entry['bio-photo']}" class="maker-img-hover">
+				</a>
+			`;
+		}
+		makers += `
+			<div class="maker" data-categories="${entry['categories']}" id="${entry['folder']}">
+			${makerImg}
 
 			<div class="maker-info">
 				<div class="maker-info-left">
@@ -332,6 +343,7 @@ function generateMakers() {
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Notes on Craft | Makers</title>
+			<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 			<link rel="stylesheet" href="/style.css">
 		</head>
 		<body>
@@ -437,6 +449,7 @@ function generateLibrary() {
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
 			<title>Notes on Craft | Library</title>
+			<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 			<link rel="stylesheet" href="/style.css">
 		</head>
 		<body>
@@ -514,6 +527,7 @@ function generateSubpages() {
 				<meta charset="UTF-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<title>Notes on Craft | Conversations | ${entry['fullname']}</title>
+				<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 				<link rel="stylesheet" href="/style.css">
 			</head>
 			<body>
@@ -550,7 +564,7 @@ function generateSubpages() {
 						<h2 class="conversation-body-heading">${entry['interview-title']}</h2>
 			
 						<div class="conversation-body">
-							<button class="conversation-body-listen" onclick="listenToRecording('/assets/recordings/${entry['soundbite']}')">
+							<button class="conversation-body-listen" onclick="listenToRecording('${entry['soundbite']}')">
 								<div class="conversation-body-listen-text">Listen</div>
 								<div class="conversation-body-listen-symbol">
 									<div></div>
@@ -604,6 +618,7 @@ function generateSubpages() {
 				<meta charset="UTF-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<title>Notes on Craft | Participatory Invitations | ${entry['fullname']}</title>
+				<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 				<link rel="stylesheet" href="/style.css">
 			</head>
 			<body>
@@ -796,6 +811,20 @@ function generateSubpages() {
 
 
 		// EXTENDED NOTES
+		let quote = '';
+		if (entry['note-quote2'].length > 0) {
+			quote = `
+				<div class="notes-body-quote">
+					<p class="notes-body-quote-text">
+						${entry['note-quote2']}
+					</p>
+					<p class="notes-body-quote-credit">
+						${entry['note-quote2-credit']}
+					</p>
+				</div>
+			`;
+		}
+
 		notesContent = `
 			<!DOCTYPE html>
 			<html lang="en">
@@ -803,6 +832,7 @@ function generateSubpages() {
 				<meta charset="UTF-8">
 				<meta name="viewport" content="width=device-width, initial-scale=1.0">
 				<title>Notes on Craft | Extended Notes | ${entry['fullname']}</title>
+				<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 				<link rel="stylesheet" href="/style.css">
 			</head>
 			<body>
@@ -849,14 +879,7 @@ function generateSubpages() {
 							<div class="notes-body-content">
 								<div class="notes-body-content-col">
 			
-									<div class="notes-body-quote">
-										<p class="notes-body-quote-text">
-											${entry['note-quote2']}
-										</p>
-										<p class="notes-body-quote-credit">
-											${entry['note-quote2-credit']}
-										</p>
-									</div>
+									${quote}
 			
 									<div class="notes-body-section" data-active="1">
 										<div class="notes-body-section-heading" onclick="toggleNotesSection(this.parentElement);">
