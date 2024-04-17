@@ -91,14 +91,11 @@ function generatePrimaryIndex() {
 		<head>
 			<meta charset="UTF-8">
 			<meta name="viewport" content="width=device-width, initial-scale=1.0">
-			<title>Notes on Craft | Primary Index</title>
+			<title>Notes on Craft | Index</title>
 			<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 			<link rel="stylesheet" href="/style.css">
 		</head>
 		<body>
-		
-			<a class="marquee" href="/"></a>
-			
 			<nav class="nav">
 				<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
 				<div class="nav-links">
@@ -106,15 +103,15 @@ function generatePrimaryIndex() {
 						<span>Filter</span>
 						<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
 					</div>
-					<a href="/primary-index/" class="nav-link" data-active="1">Primary Index</a>
 					<a href="/makers/" class="nav-link">Makers</a>
 					<a href="/library/" class="nav-link">Library</a>
+					<a href="/primary-index/" class="nav-link" data-active="1">Index</a>
 					<a href="/about/" class="nav-link">About</a>
 				</div>
 			</nav>
 		
 			<div class="nav-filters" data-active="0">
-				<h2 class="nav-filters-heading">Selected Medium</h2>
+				<h2 class="nav-filters-heading">Selected Craft</h2>
 				<div class="nav-filters-list">
 					${categoriesTemp}
 					<div class="nav-filter-clear" onclick="clearFilters();">X</div>
@@ -144,10 +141,10 @@ function generatePrimaryIndex() {
 		
 				<div class="index-header">
 					<div class="index-header-title">
-						<h2>Conversations</h2>
+						<h2>Transcripts</h2>
 					</div>
 					<p>
-						Featuring transcripts from ongoing conversations with individual makers about their particular creative pursuits, and how a definition of craft acts in service of or in opposition to their practice.
+						Transcribed conversations with individual makers about their preoccupations, and how a definition of craft acts in service of or in opposition to their practice.
 					</p>
 				</div>
 		
@@ -156,7 +153,7 @@ function generatePrimaryIndex() {
 						<h2>Participatory Invitations</h2>
 					</div>
 					<p>
-						A series of participatory invitations generated from individual conversation, each one an open invitation to the public to participate in varied manners of making.
+						A series of prompts generated from conversation, each one an open invitation to the public to participate in varied manners of making.
 					</p>
 				</div>
 		
@@ -165,7 +162,7 @@ function generatePrimaryIndex() {
 						<h2>Extended Notes</h2>
 					</div>
 					<p>
-						An extension of each conversation, these  supplementary notes encapsulate each maker’s definition of craft and the varied content that inspires their individual creative pursuits.
+						Collected supplementary notes meant to encapsulate each maker’s definition of craft and the varied content that inspires their individual creative pursuits. 
 					</p>
 				</div>
 				
@@ -176,7 +173,6 @@ function generatePrimaryIndex() {
 			</main>
 		
 			<script src="primary-index.js"></script>
-			<script src="/marquee.js"></script>
 		</body>
 		</html>
 	`
@@ -193,8 +189,21 @@ function generateMakers() {
 	let makers = '';
 	let categories = [];
 
-	for (let i=0; i<Object.keys(jsonData).length; i++) {
-		let entry = jsonData[i];
+	let keys = Object.keys(jsonData);
+	let keyNamePairs = {};
+	for (let key of keys) {
+		let lastname = jsonData[key]["lastname"];
+		keyNamePairs[lastname] = key;
+	}
+	let alphabetizedKeys = Object.keys(keyNamePairs);
+	alphabetizedKeys.sort();
+	let newOrder = [];
+	for (let key of alphabetizedKeys) {
+		newOrder.push(keyNamePairs[key]);
+	}
+
+	for (let i=0; i<newOrder.length; i++) {
+		let entry = jsonData[newOrder[i]];
 
 		if (entry['generate-bio'] != 1) {
 			continue
@@ -220,9 +229,11 @@ function generateMakers() {
 		if (entry['generate-subpages'] == 1) {
 			links = `
 				<div class="maker-links">
-					<a href="/conversations/${entry['folder']}/">${entry['interview-title']}</a>
-					<a href="/participatory-invitations/${entry['folder']}/">${entry['invitation-title']}</a>
-					<a href="/extended-notes/${entry['folder']}/">${entry['note-headline']}</a>
+					<a class="maker-link" href="/conversations/${entry['folder']}/">${entry['interview-title']}</a>
+					<a class="maker-link" href="/participatory-invitations/${entry['folder']}/">${entry['invitation-title']}</a>
+					<a class="maker-link" href="/extended-notes/${entry['folder']}/">${entry['note-headline']}</a>
+					<div class="maker-link" onclick="toggleMakerBio('${entry["folder"]}', this)" data-active="0">Bio 
+					<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></div>
 				</div>
 			`;
 		}
@@ -256,11 +267,11 @@ function generateMakers() {
 				</div>
 			</div>
 
-			<div class="maker-bio">
+			${links}
+
+			<div class="maker-bio" data-bio="${entry["folder"]}" data-active="0">
 				${entry['bio']}
 			</div>
-
-			${links}
 		</div>
 		`;
 	}
@@ -346,10 +357,7 @@ function generateMakers() {
 			<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 			<link rel="stylesheet" href="/style.css">
 		</head>
-		<body>
-		
-			<a class="marquee" href="/"></a>
-			
+		<body>			
 			<nav class="nav">
 				<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
 				<div class="nav-links">
@@ -357,15 +365,15 @@ function generateMakers() {
 						<span>Filter</span>
 						<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
 					</div>
-					<a href="/primary-index/" class="nav-link">Primary Index</a>
 					<a href="/makers/" class="nav-link" data-active="1">Makers</a>
 					<a href="/library/" class="nav-link">Library</a>
+					<a href="/primary-index/" class="nav-link">Index</a>
 					<a href="/about/" class="nav-link">About</a>
 				</div>
 			</nav>
 		
 			<div class="nav-filters" data-active="0">
-				<h2 class="nav-filters-heading">Selected Medium</h2>
+				<h2 class="nav-filters-heading">Selected Craft</h2>
 				<div class="nav-filters-list">
 					${categoriesTemp}
 					<div class="nav-filter-clear" onclick="clearFilters();">X</div>
@@ -377,7 +385,6 @@ function generateMakers() {
 			</main>
 		
 			<script src="makers.js"></script>
-			<script src="/marquee.js"></script>
 		</body>
 		</html>
 	`
@@ -452,10 +459,7 @@ function generateLibrary() {
 			<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 			<link rel="stylesheet" href="/style.css">
 		</head>
-		<body>
-		
-			<a class="marquee" href="/"></a>
-			
+		<body>			
 			<nav class="nav">
 				<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
 				<div class="nav-links">
@@ -463,15 +467,15 @@ function generateLibrary() {
 						<span>Filter</span>
 						<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
 					</div>
-					<a href="/primary-index/" class="nav-link">Primary Index</a>
 					<a href="/makers/" class="nav-link">Makers</a>
 					<a href="/library/" class="nav-link" data-active="1">Library</a>
+					<a href="/primary-index/" class="nav-link">Index</a>
 					<a href="/about/" class="nav-link">About</a>
 				</div>
 			</nav>
 		
 			<div class="nav-filters" data-active="0">
-				<h2 class="nav-filters-heading">Selected Medium</h2>
+				<h2 class="nav-filters-heading">Selected Craft</h2>
 				<div class="nav-filters-list">
 					${categoriesTemp}
 					<div class="nav-filter-clear" onclick="clearFilters();">X</div>
@@ -495,7 +499,6 @@ function generateLibrary() {
 			</main>
 		
 			<script src="library.js"></script>
-			<script src="/marquee.js"></script>
 		</body>
 		</html>
 	`
@@ -530,38 +533,28 @@ function generateSubpages() {
 				<link rel="icon" type="png" href="/assets/ui/Notes-on-Craft_Favicon.png">
 				<link rel="stylesheet" href="/style.css">
 			</head>
-			<body>
-			
-				<a class="marquee" href="/"></a>
-				
+			<body>				
 				<nav class="nav">
 					<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
 					<div class="nav-links">
-						<a href="/primary-index/" class="nav-link">Primary Index</a>
 						<a href="/makers/" class="nav-link">Makers</a>
 						<a href="/library/" class="nav-link">Library</a>
+						<a href="/primary-index/" class="nav-link">Index</a>
 						<a href="/about/" class="nav-link">About</a>
 					</div>
 				</nav>
 			
 				<main class="subpage">
 					<div class="subpage-content">
+
 						<header class="conversation-header">
-							<div class="conversation-header-lead">
-								<span>${entry['interview-subhead']}</span>
-								<span>${entry['date']}</span>
-							</div>
-							<div class="conversation-header-info">
-								${entry['pronouns']}<br>
-								${entry['occupations']}<br>
-								${entry['location']}
-							</div>
-							<p class="conversation-header-bio">
-								${entry['bio']}
-							</p>
+							A conversation with ${entry["fullname"]}<br>
+							${entry["date"]}
 						</header>
 			
 						<h2 class="conversation-body-heading">${entry['interview-title']}</h2>
+
+						<div class="conversation-header-pullout">${entry['interview-quote']}</div>
 			
 						<div class="conversation-body">
 							<button class="conversation-body-listen" onclick="listenToRecording('${entry['soundbite']}')">
@@ -572,6 +565,17 @@ function generateSubpages() {
 							</button>
 			
 							${transcript}
+
+							<footer class="conversation-footer">
+								<div class="conversation-footer-info">
+									${entry['fullname']}<span>${entry['pronouns']}</span><br>
+									${entry['occupations']}<br>
+									Based in ${entry['location']}
+								</div>
+								<p class="conversation-footer-bio">
+									${entry['bio']}
+								</p>
+							</footer>
 			
 						</div>
 					</div>
@@ -580,7 +584,6 @@ function generateSubpages() {
 				</main>
 			
 				<script src="/conversations/conversations.js"></script>
-				<script src="/marquee.js"></script>
 				<script src="/sidebar.js"></script>
 			</body>
 			</html>
@@ -604,7 +607,6 @@ function generateSubpages() {
 		for (let line of entry['invitation-tools']) {
 			toolkit += `
 				<div>
-					<svg viewBox="0 0 24 24"><path d="m17.554,12l-9.108-6.761v13.522l9.108-6.761Z"/></svg>
 					<span>${line}</span>
 				</div>
 			`
@@ -622,15 +624,12 @@ function generateSubpages() {
 				<link rel="stylesheet" href="/style.css">
 			</head>
 			<body>
-
-				<a class="marquee" href="/"></a>
-				
 				<nav class="nav">
 					<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
 					<div class="nav-links">
-						<a href="/primary-index/" class="nav-link">Primary Index</a>
 						<a href="/makers/" class="nav-link">Makers</a>
 						<a href="/library/" class="nav-link">Library</a>
+						<a href="/primary-index/" class="nav-link">Index</a>
 						<a href="/about/" class="nav-link">About</a>
 					</div>
 				</nav>
@@ -638,38 +637,44 @@ function generateSubpages() {
 				<main class="subpage">
 					<div class="subpage-content">
 						<header class="invitations-header">
+							<div class="invitations-header-intro">
+								Participatory Invitation<br>
+								${entry["date"]}
+							</div>
 							<h2 class="invitations-header-title">${entry['invitation-title']}</h2>
-							<p class="invitations-header-info">
-								${entry['invitation-mediums']}
-							</p>
 						</header>
 
 						<div class="invitations-body">
-							<div class="invitations-body-col">
-								<div class="invitations-toolkit">
-									<h3 class="invitations-toolkit-title">Toolkit</h3>
+							<div class="invitations-toolkit">
+								<img src="/assets/participatory-invitations/${entry['invitation-img']}" class="invitations-toolkit-img">
+								<div class="invitations-toolkit-text" id="toolkit" data-active="1">
+									<h3 class="invitations-toolkit-title" onclick="toggleNotesSectionAlt('#toolkit')">Toolkit <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></h3>
 									<div class="invitations-toolkit-list">
 										${toolkit}
 									</div>
-									<img src="/assets/participatory-invitations/
-									${entry['invitation-img2']}" class="invitations-toolkit-img">
-								</div>
-
-								<div class="invitations-body-section">
-									<h3>Input</h3>
-									${entry['invitation-input']}
 								</div>
 							</div>
 
-							<div class="invitations-body-col">
-								<div class="invitations-body-section">
-									<h3 class="invitations-body-section-title">Action</h3>
-									${entry['invitation-action']}
+							<div class="invitations-body-sections">
+								<div class="invitations-body-section" id="input" data-active="1">
+									<h3 onclick="toggleNotesSectionAlt('#input')">Input <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></h3>
+									<div class="invitations-body-content">
+										${entry['invitation-input']}
+									</div>
 								</div>
 
-								<div class="invitations-body-section">
-									<h3 class="invitations-body-section-title">Output</h3>
-									${entry['invitation-output']}
+								<div class="invitations-body-section" id="action" data-active="1">
+									<h3 class="invitations-body-section-title" onclick="toggleNotesSectionAlt('#action')">Action <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></h3>
+									<div class="invitations-body-content">
+										${entry['invitation-action']}
+									</div>
+								</div>
+
+								<div class="invitations-body-section" id="output" data-active="1">
+									<h3 class="invitations-body-section-title" onclick="toggleNotesSectionAlt('#output')">Output <svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg></h3>
+									<div class="invitations-body-content">
+										${entry['invitation-output']}
+									</div>
 								</div>
 							</div>
 
@@ -678,120 +683,11 @@ function generateSubpages() {
 					</div>
 
 					<div class="subpage-sidebar">
-						<div class="subpage-sidebar-section" data-section="maker" data-active="1">
-							<div class="subpage-sidebar-heading" style="--primary: #5F82FF;" onclick="toggleSidebarSection('maker')">
-								<h3>Georgia Cloepfil</h3>
-								<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
-							</div><a href="/conversations/georgia-cloepfil/" class="subpage-sidebar-link" style="--primary: #5F82FF;" data-categories="ceramics, GLASS">
-								<div class="subpage-sidebar-link-title">
-									<h4>Test 2</h4>
-								</div>
-					
-								<div class="subpage-sidebar-link-content subpage-sidebar-link-quote">
-									<p class="subpage-sidebar-link-quote-text">
-										The words are never going to be the same shape as the idea. But that's the whole adventure and ambition of writing. Without that, I might stop.
-									</p>
-									<p class="subpage-sidebar-link-quote-date">
-										30 October 2023
-									</p>
-								</div>
-							</a>
-					
-							<a href="/participatory-invitations/georgia-cloepfil/" class="subpage-sidebar-link" style="--primary: #5F82FF;" data-categories="ceramics, GLASS">
-								<div class="subpage-sidebar-link-title">
-									<h4>Test 2</h4>
-								</div>
-					
-								<div class="subpage-sidebar-link-content subpage-sidebar-link-img">
-									<img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1xw:0.74975xh;center,top&resize=1200:*">
-								</div>
-							</a>
-					
-							<a href="/participatory-invitations/georgia-cloepfil/" class="subpage-sidebar-link" style="--primary: #5F82FF;" data-categories="ceramics, GLASS">
-								<div class="subpage-sidebar-link-title">
-									<h4>Test 2</h4>
-								</div>
-					
-								<div class="subpage-sidebar-link-content subpage-sidebar-link-notes">
-									<div class="subpage-sidebar-link-notes-quote">
-										<p class="subpage-sidebar-link-notes-quote-text">
-											But I cannot stand all day in the sun with my eyes on the ball; I cannot feel the flight of the ball through my body and think only of the ball. I shall be a clinger to the outsides of words all my life. Yet I could not live with him and suffer his stupidity. He will coarsen and snore. He will marry and there will be scenes of tenderness at breakfast. But now he is young. Not a thread, not a sheet of paper lies between him and the sun, between him and the rain, between him and the moon as he lies naked, tumbled, hot, on his bed. Now as they drive along the high road in their brake his face is mottled red and yellow. He will throw off his coat and stand with his legs apart, with his hands ready, watching the wicket. And he will pray, “Lord let us win”; he will think of one thing only, that they should win.
-										</p>
-										<p class="subpage-sidebar-link-notes-quote-credit">
-											Virginia Woolf, <em>The Waves</em>
-										</p>
-									</div>
-									<div class="subpage-sidebar-link-notes-def">
-										<p class="subpage-sidebar-link-notes-def-term">
-											Craft/Kraft/: Noun
-										</p>
-										<p class="subpage-sidebar-link-notes-def-text">
-											Careful attention to the sound and the balance of a sentence.
-										</p>
-									</div>
-								</div>
-							</a>
-						</div>
-
-						<div class="subpage-sidebar-section" data-section="related" data-active="1">
-							<div class="subpage-sidebar-heading" style="--primary: var(--green);" onclick="toggleSidebarSection('related')">
-								<h3>Related Readings</h3>
-								<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
-							</div><a href="/conversations/georgia-cloepfil/" class="subpage-sidebar-link" style="--primary: #5F82FF;" data-categories="ceramics, GLASS">
-								<div class="subpage-sidebar-link-title">
-									<h4>Test 2</h4>
-								</div>
-					
-								<div class="subpage-sidebar-link-content subpage-sidebar-link-quote">
-									<p class="subpage-sidebar-link-quote-text">
-										The words are never going to be the same shape as the idea. But that's the whole adventure and ambition of writing. Without that, I might stop.
-									</p>
-									<p class="subpage-sidebar-link-quote-date">
-										30 October 2023
-									</p>
-								</div>
-							</a>
-					
-							<a href="/participatory-invitations/georgia-cloepfil/" class="subpage-sidebar-link" style="--primary: #5F82FF;" data-categories="ceramics, GLASS">
-								<div class="subpage-sidebar-link-title">
-									<h4>Test 2</h4>
-								</div>
-					
-								<div class="subpage-sidebar-link-content subpage-sidebar-link-img">
-									<img src="https://hips.hearstapps.com/hmg-prod/images/dog-puppy-on-garden-royalty-free-image-1586966191.jpg?crop=1xw:0.74975xh;center,top&resize=1200:*">
-								</div>
-							</a>
-					
-							<a href="/participatory-invitations/georgia-cloepfil/" class="subpage-sidebar-link" style="--primary: #5F82FF;" data-categories="ceramics, GLASS">
-								<div class="subpage-sidebar-link-title">
-									<h4>Test 2</h4>
-								</div>
-					
-								<div class="subpage-sidebar-link-content subpage-sidebar-link-notes">
-									<div class="subpage-sidebar-link-notes-quote">
-										<p class="subpage-sidebar-link-notes-quote-text">
-											But I cannot stand all day in the sun with my eyes on the ball; I cannot feel the flight of the ball through my body and think only of the ball. I shall be a clinger to the outsides of words all my life. Yet I could not live with him and suffer his stupidity. He will coarsen and snore. He will marry and there will be scenes of tenderness at breakfast. But now he is young. Not a thread, not a sheet of paper lies between him and the sun, between him and the rain, between him and the moon as he lies naked, tumbled, hot, on his bed. Now as they drive along the high road in their brake his face is mottled red and yellow. He will throw off his coat and stand with his legs apart, with his hands ready, watching the wicket. And he will pray, “Lord let us win”; he will think of one thing only, that they should win.
-										</p>
-										<p class="subpage-sidebar-link-notes-quote-credit">
-											Virginia Woolf, <em>The Waves</em>
-										</p>
-									</div>
-									<div class="subpage-sidebar-link-notes-def">
-										<p class="subpage-sidebar-link-notes-def-term">
-											Craft/Kraft/: Noun
-										</p>
-										<p class="subpage-sidebar-link-notes-def-text">
-											Careful attention to the sound and the balance of a sentence.
-										</p>
-									</div>
-								</div>
-							</a>
-						</div>
+						
 					</div>
 				</main>
 
 				<script src="/extended-notes/extended-notes.js"></script>
-				<script src="/marquee.js"></script>
 				<script src="/sidebar.js"></script>
 			</body>
 			</html>
@@ -836,15 +732,12 @@ function generateSubpages() {
 				<link rel="stylesheet" href="/style.css">
 			</head>
 			<body>
-			
-				<a class="marquee" href="/"></a>
-				
 				<nav class="nav">
 					<h1 class="nav-logo"><a href="/">Notes on Craft</a></h1>
 					<div class="nav-links">
-						<a href="/primary-index/" class="nav-link">Primary Index</a>
 						<a href="/makers/" class="nav-link">Makers</a>
 						<a href="/library/" class="nav-link">Library</a>
+						<a href="/primary-index/" class="nav-link">Index</a>
 						<a href="/about/" class="nav-link">About</a>
 					</div>
 				</nav>
@@ -852,13 +745,13 @@ function generateSubpages() {
 				<main class="subpage">
 					<div class="subpage-content">
 						<header class="notes-header">
-							<div class="notes-header-left">
-								<p class="notes-header-word">${entry['note-word']}</p>
-								<p class="notes-header-def">${entry['note-def']}</p>
+							<div class="notes-header-intro">
+								Extended notes by ${entry["fullname"]}<br>
+								${entry["date"]}
 							</div>
-							<p class="notes-header-title">
-								${entry['note-headline']}
-							</p>
+							<div class="notes-header-title">
+							${entry["note-headline"]}
+							</div>
 						</header>
 			
 						<div class="notes-quote">
@@ -871,16 +764,19 @@ function generateSubpages() {
 						</div>
 			
 						<div class="notes-body">
-							<div class="notes-body-header">
-								<h2 class="notes-body-header-title">Extended Notes</h2>
-								<h2 class="notes-body-header-date">${entry['date']}</h2>
-							</div>
 			
 							<div class="notes-body-content">
 								<div class="notes-body-content-col">
-			
+									<div class="notes-def">
+										<p class="notes-def-word">${entry['note-word']}</p>
+										<p class="notes-def-content">${entry['note-def']}</p>
+									</div>
+
 									${quote}
+								</div>
 			
+								<div class="notes-body-content-col">
+
 									<div class="notes-body-section" data-active="1">
 										<div class="notes-body-section-heading" onclick="toggleNotesSection(this.parentElement);">
 											<h4>Read</h4>
@@ -890,10 +786,6 @@ function generateSubpages() {
 											${entry['note-read']}
 										</div>
 									</div>
-			
-								</div>
-			
-								<div class="notes-body-content-col">
 			
 									<div class="notes-body-section" data-active="1">
 										<div class="notes-body-section-heading" onclick="toggleNotesSection(this.parentElement);">
@@ -934,7 +826,6 @@ function generateSubpages() {
 				</main>
 			
 				<script src="/extended-notes/extended-notes.js"></script>
-				<script src="/marquee.js"></script>
 				<script src="/sidebar.js"></script>
 			</body>
 			</html>

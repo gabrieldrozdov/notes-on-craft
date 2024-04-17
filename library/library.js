@@ -72,8 +72,8 @@ function sortLibrary(category) {
 		}
 	} else {
 		sortCategory = category;
-		sortMode = 'descending';
-		activeToggle.dataset.active = 1;
+		sortMode = 'ascending';
+		activeToggle.dataset.active = 2;
 	}
 
 	// Do the actual sorting

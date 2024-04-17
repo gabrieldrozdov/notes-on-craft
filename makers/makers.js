@@ -52,3 +52,15 @@ function clearFilters() {
 		maker.dataset.hide = 0;
 	}
 }
+
+// Toggle bios
+function toggleMakerBio(target, toggle) {
+	let elmnt = document.querySelector(`[data-bio="${target}"]`);
+	if (parseInt(elmnt.dataset.active) == 0) {
+		elmnt.dataset.active = 1;
+		toggle.dataset.active = 1;
+	} else {
+		elmnt.dataset.active = 0;
+		toggle.dataset.active = 0;
+	}
+}

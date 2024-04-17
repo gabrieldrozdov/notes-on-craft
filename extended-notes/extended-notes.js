@@ -5,3 +5,11 @@ function toggleNotesSection(elmnt) {
 		elmnt.dataset.active = 1;
 	}
 }
+function toggleNotesSectionAlt(elmnt) {
+	elmntDOM = document.querySelector(elmnt);
+	if (parseInt(elmntDOM.dataset.active) == 1) {
+		elmntDOM.dataset.active = 0;
+	} else {
+		elmntDOM.dataset.active = 1;
+	}
+}

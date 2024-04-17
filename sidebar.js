@@ -109,7 +109,7 @@ function generateSidebarContent(name) {
 	}
 	
 	let content = `
-		<div class="subpage-sidebar-section" data-section="maker" data-active="1">
+		<div class="subpage-sidebar-section" data-section="maker" data-active="0">
 			<div class="subpage-sidebar-heading" style="--primary: ${entry['color']};" onclick="toggleSidebarSection('maker')">
 				<h3>${entry['fullname']}</h3>
 				<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>
@@ -167,7 +167,7 @@ function generateSidebarContent(name) {
 			</a>
 		</div>
 
-		<div class="subpage-sidebar-section" data-section="related" data-active="1">
+		<div class="subpage-sidebar-section" data-section="related" data-active="0">
 			<div class="subpage-sidebar-heading" style="--primary: var(--green);" onclick="toggleSidebarSection('related')">
 				<h3>Related Readings</h3>
 				<svg viewBox="0 0 24 24"><path d="m12,18.666L2.104,5.334h19.792l-9.896,13.331Z"/></svg>

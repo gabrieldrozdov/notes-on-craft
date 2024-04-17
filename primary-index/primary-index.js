@@ -73,13 +73,17 @@ for (let link of document.querySelectorAll('.index-link')) {
 	link.addEventListener('mouseenter', () => {highlightGroup(link.dataset.group)});
 	link.addEventListener('mouseleave', () => {unhighlightGroup(link.dataset.group)});
 }
+for (let link of document.querySelectorAll('.index-name')) {
+	link.addEventListener('mouseenter', () => {highlightGroup(link.dataset.group)});
+	link.addEventListener('mouseleave', () => {unhighlightGroup(link.dataset.group)});
+}
 function highlightGroup(group) {
-	for (let link of document.querySelectorAll(`.index-link[data-group="${group}"`)) {
+	for (let link of document.querySelectorAll(`[data-group="${group}"`)) {
 		link.dataset.highlight = 1;
 	}
 }
 function unhighlightGroup(group) {
-	for (let link of document.querySelectorAll(`.index-link[data-group="${group}"`)) {
+	for (let link of document.querySelectorAll(`[data-group="${group}"`)) {
 		link.dataset.highlight = 0;
 	}
 }
